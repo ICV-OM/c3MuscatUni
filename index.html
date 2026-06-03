@@ -3,34 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>برنامج تأهيل الذكاء الاصطناعي لطلبة جامعة مسقط — خطة فصل دراسي كامل</title>
+<title>برنامج تأهيل الذكاء الاصطناعي لطلبة كلية مسقط — خطة فصل دراسي كامل</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=Tajawal:wght@300;400;500;700;800&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
-  /* ============ DESIGN TOKENS ============ */
+  /* ============ DESIGN TOKENS — MUSCAT COLLEGE BRAND ============ */
   :root{
-    --emerald-900:#082c25;
-    --emerald-800:#0a4d3c;
-    --emerald-700:#0f6b53;
-    --emerald-500:#1f8a6f;
-    --emerald-300:#7ab59d;
-    --emerald-50:#e8f1ed;
-    --gold-900:#7a5a1c;
-    --gold-700:#b8893c;
-    --gold-500:#d4a657;
+    /* Primary Purple (from Muscat College logo #733596) */
+    --emerald-900:#260045;
+    --emerald-800:#3d025e;
+    --emerald-700:#500a77;
+    --emerald-500:#733596;
+    --emerald-300:#ac76b2;
+    --emerald-50:#f5edf7;
+    /* Brand Gold (from Muscat College logo #bda03a) */
+    --gold-900:#7a5a18;
+    --gold-700:#a88224;
+    --gold-500:#bda03a;
     --gold-200:#ecd9a8;
-    --gold-50:#faf3e0;
-    --terra:#c45c39;
-    --terra-light:#e8826a;
-    --cream:#f8f3e6;
+    --gold-50:#fbf6e5;
+    /* Accent: Deep purple-burgundy harmonized with primary */
+    --terra:#8B2253;
+    --terra-light:#b8527e;
+    --cream:#faf6ee;
     --paper:#fbf8ef;
-    --ink:#1a2026;
-    --ink-soft:#3a424d;
-    --muted:#7a8290;
-    --rule:#d9d2c0;
-    --shadow:0 1px 3px rgba(10,40,30,0.06), 0 8px 24px rgba(10,40,30,0.04);
+    --ink:#1a1015;
+    --ink-soft:#3a2a3a;
+    --muted:#6b5a6f;
+    --rule:#e0d5e0;
+    --shadow:0 1px 3px rgba(80,10,119,0.08), 0 8px 24px rgba(80,10,119,0.05);
   }
 
   *{margin:0;padding:0;box-sizing:border-box}
@@ -77,10 +80,10 @@
   .c3-logo-cover img{width:40px;height:40px;display:block;border-radius:3px}
   .c3-logo-cover .by{
     font-family:'IBM Plex Sans Arabic',sans-serif;
-    font-size:7pt;letter-spacing:.15em;color:#0a4d3c;
+    font-size:7pt;letter-spacing:.15em;color:#3d025e;
     text-transform:uppercase;line-height:1.3;
   }
-  .c3-logo-cover .by strong{display:block;color:#b8893c;font-size:8.5pt;letter-spacing:.05em;margin-top:1px}
+  .c3-logo-cover .by strong{display:block;color:#a88224;font-size:8.5pt;letter-spacing:.05em;margin-top:1px}
   .c3-logo-footer{
     display:flex;align-items:center;gap:12px;
     padding:14px 18px;background:rgba(248,243,230,0.08);
@@ -89,8 +92,8 @@
   }
   .c3-logo-footer img{width:48px;height:48px;border-radius:4px;background:#fff;padding:2px}
   .c3-logo-footer .meta{display:flex;flex-direction:column;gap:2px}
-  .c3-logo-footer .meta .name{font-family:'Reem Kufi',sans-serif;color:#b8893c;font-weight:700;font-size:13pt}
-  .c3-logo-footer .meta .desc{font-family:'Tajawal',sans-serif;color:#f8f3e6;font-size:9pt;opacity:.85}
+  .c3-logo-footer .meta .name{font-family:'Reem Kufi',sans-serif;color:#a88224;font-weight:700;font-size:13pt}
+  .c3-logo-footer .meta .desc{font-family:'Tajawal',sans-serif;color:#faf6ee;font-size:9pt;opacity:.85}
 
   /* ============ TYPOGRAPHY ============ */
   h1,h2,h3,h4{font-family:'Reem Kufi',sans-serif;color:var(--emerald-900);font-weight:600;line-height:1.3}
@@ -109,7 +112,7 @@
     background:
       radial-gradient(ellipse at top right,rgba(212,166,87,.18),transparent 50%),
       radial-gradient(ellipse at bottom left,rgba(31,138,111,.12),transparent 50%),
-      linear-gradient(180deg,#0a2e26 0%,#082c25 50%,#04201a 100%);
+      linear-gradient(180deg,#0a2e26 0%,#260045 50%,#04201a 100%);
     color:var(--cream);
     padding:0;
     display:flex;
@@ -574,7 +577,7 @@
     <div class="cover-top">
       <div class="cover-brand">
         <span class="label">CONFIDENTIAL · PROGRAM PROPOSAL</span>
-        <span class="org">جامعة مسقط — Muscat University</span>
+        <span class="org">كلية مسقط — Muscat College</span>
       </div>
       <div class="cover-meta">
         <div class="c3-logo-cover">
@@ -583,14 +586,14 @@
         </div>
         <div>الإصدار <strong>1.0</strong></div>
         <div>أبريل <strong>2026</strong></div>
-        <div>المرجع: <strong>MU-AI-2026-01</strong></div>
+        <div>المرجع: <strong>MC-AI-2026-01</strong></div>
       </div>
     </div>
 
     <div class="cover-title">
       <div class="kicker">PROGRAM CHARTER · ميثاق البرنامج</div>
-      <h1>برنامج تأهيل<br><span class="gold">الذكاء الاصطناعي</span><br>لطلبة الجامعة</h1>
-      <div class="sub">خطة فصل دراسي كامل (٦ أشهر) لتمكين طلبة كليات الهندسة وإدارة الأعمال والنقل واللوجستيات من إتقان أدوات الذكاء الاصطناعي المجانية بما يخدم تخصصاتهم ويواكب رؤية عُمان 2040.</div>
+      <h1>برنامج تأهيل<br><span class="gold">الذكاء الاصطناعي</span><br>لطلبة الكُلية</h1>
+      <div class="sub">خطة فصل دراسي كامل (٦ أشهر) لتمكين طلبة قطاعات الأعمال والحوسبة والبيانات في الكلية من إتقان أدوات الذكاء الاصطناعي المجانية بما يخدم تخصصاتهم ويواكب رؤية عُمان 2040.</div>
     </div>
 
     <div class="cover-bottom">
@@ -602,7 +605,7 @@
   </div>
 
   <div class="cover-footer">
-    <span>PREPARED FOR · أُعِدّ لـ Muscat University</span>
+    <span>PREPARED FOR · أُعِدّ لـ Muscat College</span>
     <span>C3 ADVISORY · COMMUNITIES CONNECT CITIES</span>
   </div>
 </section>
@@ -626,14 +629,14 @@
       <div class="toc-item"><span class="toc-num">01</span><span class="toc-title h2">الملخص التنفيذي</span><span class="toc-page">03</span></div>
       <div class="toc-item"><span class="toc-num">02</span><span class="toc-title h2">المقدمة والسياق الاستراتيجي</span><span class="toc-page">05</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— لماذا الآن؟ الذكاء الاصطناعي ورؤية عُمان</span><span class="toc-page">05</span></div>
-      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— جامعة مسقط: السياق المؤسسي</span><span class="toc-page">06</span></div>
+      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— كلية مسقط: السياق المؤسسي</span><span class="toc-page">06</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— مبررات البرنامج وقيمته المضافة</span><span class="toc-page">07</span></div>
       <div class="toc-item"><span class="toc-num">03</span><span class="toc-title h2">الإطار الاستراتيجي للبرنامج</span><span class="toc-page">08</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— الرؤية والرسالة والقيم</span><span class="toc-page">08</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— المواءمة مع رؤية عُمان 2040</span><span class="toc-page">09</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— أهداف التنمية المستدامة</span><span class="toc-page">10</span></div>
       <div class="toc-item"><span class="toc-num">04</span><span class="toc-title h2">تحليل الجمهور المستهدف</span><span class="toc-page">11</span></div>
-      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— الكليات الثلاث ونماذج الشخصيات</span><span class="toc-page">11</span></div>
+      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— القطاعات الثلاثة ونماذج الشخصيات</span><span class="toc-page">11</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— المتطلبات السابقة وتقييم الجاهزية</span><span class="toc-page">13</span></div>
       <div class="toc-item"><span class="toc-num">05</span><span class="toc-title h2">الأهداف ومخرجات التعلم</span><span class="toc-page">14</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— أهداف SMART</span><span class="toc-page">14</span></div>
@@ -653,17 +656,18 @@
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— الشهر الخامس: البناء والأتمتة</span><span class="toc-page">38</span></div>
       <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— الشهر السادس: مشروع التخرج</span><span class="toc-page">42</span></div>
       <div class="toc-item"><span class="toc-num">09</span><span class="toc-title h2">كتالوج الأدوات المجانية</span><span class="toc-page">46</span></div>
-      <div class="toc-item"><span class="toc-num">10</span><span class="toc-title h2">التقييم والشهادات</span><span class="toc-page">53</span></div>
-      <div class="toc-item"><span class="toc-num">11</span><span class="toc-title h2">الموارد والبنية التحتية</span><span class="toc-page">56</span></div>
-      <div class="toc-item"><span class="toc-num">12</span><span class="toc-title h2">إدارة المخاطر</span><span class="toc-page">58</span></div>
-      <div class="toc-item"><span class="toc-num">13</span><span class="toc-title h2">خارطة التنفيذ والحوكمة</span><span class="toc-page">60</span></div>
-      <div class="toc-item"><span class="toc-num">14</span><span class="toc-title h2">مؤشرات الأداء KPIs</span><span class="toc-page">62</span></div>
-      <div class="toc-item"><span class="toc-num">15</span><span class="toc-title h2">الملاحق</span><span class="toc-page">64</span></div>
-      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— نموذج خطة درس</span><span class="toc-page">64</span></div>
-      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— نماذج مشاريع التخرج</span><span class="toc-page">65</span></div>
-      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— روبركات التقييم</span><span class="toc-page">66</span></div>
-      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— خارطة طريق الأدوات وجدولها</span><span class="toc-page">67</span></div>
-      <div class="toc-item"><span class="toc-num">16</span><span class="toc-title h2">المراجع والاستشهادات</span><span class="toc-page">70</span></div>
+      <div class="toc-item"><span class="toc-num">10</span><span class="toc-title h2">وكلاء الذكاء الاصطناعي وMAS</span><span class="toc-page">54</span></div>
+      <div class="toc-item"><span class="toc-num">11</span><span class="toc-title h2">التقييم والشهادات</span><span class="toc-page">58</span></div>
+      <div class="toc-item"><span class="toc-num">12</span><span class="toc-title h2">الموارد والبنية التحتية</span><span class="toc-page">61</span></div>
+      <div class="toc-item"><span class="toc-num">13</span><span class="toc-title h2">إدارة المخاطر</span><span class="toc-page">63</span></div>
+      <div class="toc-item"><span class="toc-num">14</span><span class="toc-title h2">خارطة التنفيذ والحوكمة</span><span class="toc-page">65</span></div>
+      <div class="toc-item"><span class="toc-num">15</span><span class="toc-title h2">مؤشرات الأداء KPIs</span><span class="toc-page">67</span></div>
+      <div class="toc-item"><span class="toc-num">16</span><span class="toc-title h2">الملاحق</span><span class="toc-page">69</span></div>
+      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— نموذج خطة درس</span><span class="toc-page">69</span></div>
+      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— نماذج مشاريع التخرج</span><span class="toc-page">69</span></div>
+      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— روبركات التقييم</span><span class="toc-page">70</span></div>
+      <div class="toc-item"><span class="toc-num"></span><span class="toc-title">— خارطة طريق الأدوات وجدولها</span><span class="toc-page">72</span></div>
+      <div class="toc-item"><span class="toc-num">17</span><span class="toc-title h2">المراجع والاستشهادات</span><span class="toc-page">75</span></div>
     </div>
   </div>
 </section>
@@ -680,7 +684,7 @@
     </div>
   </div>
 
-  <p class="lead">يقدّم هذا المستند خطة متكاملة لبرنامج تأهيل طلبة جامعة مسقط في الذكاء الاصطناعي على مدى فصل دراسي كامل (٦ أشهر / ٢٤ أسبوعاً)، مُصمَّمٌ ليكون جسراً عملياً بين البرامج الأكاديمية النظرية وسوق العمل العُماني الذي يتسارع نحو الأتمتة الذكية.</p>
+  <p class="lead">يقدّم هذا المستند خطة متكاملة لبرنامج تأهيل طلبة كلية مسقط في الذكاء الاصطناعي على مدى فصل دراسي كامل (٦ أشهر / ٢٤ أسبوعاً)، مُصمَّمٌ ليكون جسراً عملياً بين البرامج الأكاديمية النظرية وسوق العمل العُماني الذي يتسارع نحو الأتمتة الذكية.</p>
 
   <h3>المشكلة التي يعالجها البرنامج</h3>
   <p>تُشير المؤشرات العالمية إلى أن ٧٧٪ من الوظائف ستتأثر مباشرة بأدوات الذكاء الاصطناعي خلال السنوات الخمس القادمة، فيما تبقى نسبة الطلبة الذين يُتقنون استخدام هذه الأدوات استخداماً مهنياً منخفضة. تواجه الجامعات في عُمان تحدياً مزدوجاً: <strong>أولاً</strong>، أن تُدمج هذه الأدوات في برامجها الأكاديمية دون الإخلال بالمناهج المعتمدة، و<strong>ثانياً</strong>، أن تُهيّئ الخريج للعمل في بيئة تتطلب طلاقة في التعامل مع وكلاء الذكاء الاصطناعي، وقراءة البيانات، وأتمتة سير العمل.</p>
@@ -702,7 +706,7 @@
     <div class="card accent-l">
       <h4>الركيزة ٣</h4>
       <strong>تخصيص حسب الكلية</strong>
-      <p style="margin-top:6px;font-size:10pt">جذع مشترك في الأشهر الثلاثة الأولى، ثم مسارات متفرعة في الأشهر الثلاثة الأخيرة وفق الكليات الثلاث: الهندسة، الأعمال، النقل واللوجستيات.</p>
+      <p style="margin-top:6px;font-size:10pt">جذع مشترك في الأشهر الثلاثة الأولى، ثم مسارات متفرعة في الأشهر الثلاثة الأخيرة وفق ثلاثة قطاعات تَخصُّصية: الأعمال والإدارة، الحوسبة والبرمجيات، البيانات والأمن السيبراني.</p>
     </div>
   </div>
 
@@ -767,13 +771,13 @@
   <div class="callout tip">
     <div class="icon">✓</div>
     <div>
-      <strong>توصية تنفيذية:</strong> نُوصي بإطلاق البرنامج كمسار مُكمّل اختياري في الفصل الدراسي الأول من العام الأكاديمي 2026/2027، مع تشغيل دفعة تجريبية (Pilot Cohort) من ٢٥–٣٠ طالباً تُغطّي الكليات الثلاث، قبل التوسع في الفصول اللاحقة وفق نموذج التعلم المُختلط.
+      <strong>توصية تنفيذية:</strong> نُوصي بإطلاق البرنامج كمسار مُكمّل اختياري في الفصل الدراسي الأول من العام الأكاديمي 2026/2027، مع تشغيل دفعة تجريبية (Pilot Cohort) من ٢٥–٣٠ طالباً تُغطّي القطاعات الثلاثة، قبل التوسع في الفصول اللاحقة وفق نموذج التعلم المُختلط.
     </div>
   </div>
 
   <h3>عوامل النجاح الحرجة</h3>
   <ul class="clean">
-    <li><strong>التزام إداري:</strong> دعم واضح من إدارة الجامعة وعمداء الكليات الثلاث.</li>
+    <li><strong>التزام إداري:</strong> دعم واضح من إدارة الجامعة وعمداء القطاعات الثلاثة.</li>
     <li><strong>مدرب مؤهل:</strong> مدرب رئيسي ذو خبرة في الذكاء الاصطناعي وتجربة تدريبية ميدانية.</li>
     <li><strong>بنية تحتية ملائمة:</strong> قاعة حاسوب مزودة بإنترنت سريع وإمكانية الوصول إلى المنصات السحابية.</li>
     <li><strong>تقييم مستمر:</strong> منظومة تقييم تكوينية وختامية مع تغذية راجعة منتظمة كل أسبوعين.</li>
@@ -825,56 +829,56 @@
 </section>
 
 <section class="page" data-page="06">
-  <h3>جامعة مسقط: السياق المؤسسي</h3>
-  <p>تأسست جامعة مسقط عام 2016 بترخيص من وزارة التعليم العالي والبحث العلمي، بدعمٍ من «أوكسفورد للابتكار» (Oxford University Innovation Group)، وتتميّز ببرامج أكاديمية مُصمّمة وفق متطلبات صاحب العمل في القرن الحادي والعشرين. تُقدّم الجامعة برامجها عبر ثلاث كليات:</p>
+  <h3>كلية مسقط: السياق المؤسسي</h3>
+  <p>تأسست كلية مسقط (Muscat College) عام ١٩٩٦ كَكلية خاصة بِترخيص من وزارة التعليم العالي والبَحث العلمي والابتكار، وتُقدّم برامج أكاديمية مُعتمَدة عبر شَراكاتها الدَّولية مع: <strong>University of Westminster</strong> (لندن)، <strong>University of Stirling</strong> (اسكتلندا)، <strong>University of Malaysia Pahang Al-Sultan Abdullah</strong>، و<strong>Scottish Qualifications Authority (SQA)</strong>. تَتنوَّع برامجها بين الفاونديشن، الدبلوم، البكالوريوس، والماجستير عبر ثلاثة قطاعات رئيسة:</p>
 
   <!-- Faculty visualization SVG -->
   <svg class="timeline-svg" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
     <!-- Central core -->
-    <circle cx="400" cy="160" r="60" fill="#0a4d3c" stroke="#d4a657" stroke-width="2"/>
-    <text x="400" y="155" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="600">الجذع</text>
-    <text x="400" y="172" text-anchor="middle" fill="#d4a657" font-family="Reem Kufi" font-size="11">المشترك</text>
+    <circle cx="400" cy="160" r="60" fill="#3d025e" stroke="#bda03a" stroke-width="2"/>
+    <text x="400" y="155" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="600">الجذع</text>
+    <text x="400" y="172" text-anchor="middle" fill="#bda03a" font-family="Reem Kufi" font-size="11">المشترك</text>
 
-    <!-- Faculty 1: Engineering -->
-    <circle cx="180" cy="160" r="75" fill="#0f6b53" stroke="#d4a657" stroke-width="2"/>
-    <text x="180" y="150" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="600">الهندسة</text>
-    <text x="180" y="168" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="11">والتقنية</text>
-    <text x="180" y="184" text-anchor="middle" fill="#ecd9a8" font-family="IBM Plex Sans Arabic" font-size="9">Engineering &amp; Technology</text>
+    <!-- Sector 1: Business & Management -->
+    <circle cx="180" cy="160" r="75" fill="#500a77" stroke="#bda03a" stroke-width="2"/>
+    <text x="180" y="150" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="600">الأعمال</text>
+    <text x="180" y="168" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="11">والإدارة</text>
+    <text x="180" y="184" text-anchor="middle" fill="#ecd9a8" font-family="IBM Plex Sans Arabic" font-size="9">Business &amp; Management</text>
 
-    <!-- Faculty 2: Business -->
-    <circle cx="620" cy="80" r="75" fill="#1f8a6f" stroke="#d4a657" stroke-width="2"/>
-    <text x="620" y="76" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="600">إدارة</text>
-    <text x="620" y="94" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="600">الأعمال</text>
-    <text x="620" y="112" text-anchor="middle" fill="#ecd9a8" font-family="IBM Plex Sans Arabic" font-size="9">Business &amp; Management</text>
+    <!-- Sector 2: Computing & Software -->
+    <circle cx="620" cy="80" r="75" fill="#733596" stroke="#bda03a" stroke-width="2"/>
+    <text x="620" y="76" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="600">الحوسبة</text>
+    <text x="620" y="94" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="600">والبرمجيات</text>
+    <text x="620" y="112" text-anchor="middle" fill="#ecd9a8" font-family="IBM Plex Sans Arabic" font-size="9">Computing &amp; Software</text>
 
-    <!-- Faculty 3: Transport -->
-    <circle cx="620" cy="240" r="75" fill="#c45c39" stroke="#d4a657" stroke-width="2"/>
-    <text x="620" y="236" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="600">النقل</text>
-    <text x="620" y="254" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="600">واللوجستيات</text>
-    <text x="620" y="272" text-anchor="middle" fill="#ecd9a8" font-family="IBM Plex Sans Arabic" font-size="9">Transport &amp; Logistics</text>
+    <!-- Sector 3: Data & Cyber Security -->
+    <circle cx="620" cy="240" r="75" fill="#8B2253" stroke="#bda03a" stroke-width="2"/>
+    <text x="620" y="236" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="600">البيانات</text>
+    <text x="620" y="254" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="600">والأمن السيبراني</text>
+    <text x="620" y="272" text-anchor="middle" fill="#ecd9a8" font-family="IBM Plex Sans Arabic" font-size="9">Data &amp; Cyber Security</text>
 
     <!-- Connectors -->
-    <line x1="255" y1="160" x2="340" y2="160" stroke="#b8893c" stroke-width="2" stroke-dasharray="4 4"/>
-    <line x1="450" y1="135" x2="555" y2="100" stroke="#b8893c" stroke-width="2" stroke-dasharray="4 4"/>
-    <line x1="450" y1="185" x2="555" y2="220" stroke="#b8893c" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="255" y1="160" x2="340" y2="160" stroke="#a88224" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="450" y1="135" x2="555" y2="100" stroke="#a88224" stroke-width="2" stroke-dasharray="4 4"/>
+    <line x1="450" y1="185" x2="555" y2="220" stroke="#a88224" stroke-width="2" stroke-dasharray="4 4"/>
 
     <!-- Footer label -->
-    <text x="400" y="300" text-anchor="middle" fill="#7a8290" font-family="Reem Kufi" font-size="10">الكليات الثلاث لجامعة مسقط — هيكل البرنامج التدريبي</text>
+    <text x="400" y="300" text-anchor="middle" fill="#6b5a6f" font-family="Reem Kufi" font-size="10">القطاعات الثلاثة لكلية مسقط — هيكل البرنامج التدريبي</text>
   </svg>
 
   <h4>السمات الديموغرافية للطلبة</h4>
   <p>يتراوح عمر طلبة الجامعة في الغالب بين ١٨ و٢٤ عاماً، وهم جيلٌ نشأ على الأجهزة الذكية، لكن نسبة من يستخدمون أدوات AI استخداماً إنتاجياً (لا ترفيهياً) لا تتجاوز ٢٠٪. هذه الفجوة بين «الاستخدام الترفيهي» و«الاستخدام المهني» هي بالضبط ما يستهدف البرنامج سدّه.</p>
 
-  <h4>الفرص الخاصة بجامعة مسقط</h4>
+  <h4>الفرص الخاصة بكلية مسقط</h4>
   <ul class="clean">
     <li><strong>الحجم المعقول للدفعات:</strong> يُتيح تطبيق نموذج تدريب عملي مُكثّف، وهو ما لا يتوفر في الجامعات الكبرى.</li>
-    <li><strong>الشراكات الصناعية:</strong> ارتباط الجامعة بشركات استراتيجية (PDO, Oman LNG, Asyad) يُتيح بيئات تطبيق حقيقية للمشاريع.</li>
+    <li><strong>الشراكات الصناعية:</strong> ارتباط الجامعة بشركات استراتيجية (KPMG, EY, Bank Muscat, Omantel) يُتيح بيئات تطبيق حقيقية للمشاريع.</li>
     <li><strong>برنامج «سنة التدريب الميداني» (Placement Year):</strong> منصة جاهزة لاحتضان طلبة البرنامج في مشاريع AI فعلية داخل تلك الشركات.</li>
     <li><strong>الانفتاح على الجامعات البريطانية:</strong> روابط الجامعة بأكسفورد وغيرها تُمكّن من جلب أحدث الممارسات التعليمية في AI.</li>
   </ul>
 
   <div class="pullquote">
-    «إن إعداد طلبة جامعة مسقط لاستخدام الذكاء الاصطناعي ليس ترفاً تقنياً، بل واجبٌ مؤسسي يُملي علينا أن نمنح كل طالب فرصةً عادلة في مستقبلٍ سيكون فيه إتقان AI كإتقان قراءة الميزانية.»
+    «إن إعداد طلبة كلية مسقط لاستخدام الذكاء الاصطناعي ليس ترفاً تقنياً، بل واجبٌ مؤسسي يُملي علينا أن نمنح كل طالب فرصةً عادلة في مستقبلٍ سيكون فيه إتقان AI كإتقان قراءة الميزانية.»
   </div>
 </section>
 
@@ -984,7 +988,7 @@
   </div>
 
   <h3>الرسالة</h3>
-  <p>تمكين طلبة جامعة مسقط من إتقان منظومة متكاملة من أدوات الذكاء الاصطناعي المجانية بأسلوب عمليّ متدرّج، يُراعي السياق المحلي للغة العربية وللبيئة العُمانية، ويربط التعلّم بمشاريع حقيقية، عبر فصلٍ دراسيٍّ كاملٍ من التدريب المُكثّف بإشراف خبراء مُمارِسين.</p>
+  <p>تمكين طلبة كلية مسقط من إتقان منظومة متكاملة من أدوات الذكاء الاصطناعي المجانية بأسلوب عمليّ متدرّج، يُراعي السياق المحلي للغة العربية وللبيئة العُمانية، ويربط التعلّم بمشاريع حقيقية، عبر فصلٍ دراسيٍّ كاملٍ من التدريب المُكثّف بإشراف خبراء مُمارِسين.</p>
 
   <h3>القيم الجوهرية</h3>
   <div class="grid-4">
@@ -1034,7 +1038,7 @@
   <p>يسعى البرنامج إلى تحقيق خمسة أهداف استراتيجية مترابطة، كل هدف منها قابل للقياس وله مؤشرات أداء محددة (انظر الفصل 15):</p>
 
   <ol style="padding-right:20px;margin-top:10px">
-    <li style="margin-bottom:8px"><strong>تأهيل ١٥٠ طالباً سنوياً</strong> على ثلاث دفعات (٥٠ طالباً لكل دفعة) من الكليات الثلاث.</li>
+    <li style="margin-bottom:8px"><strong>تأهيل ١٥٠ طالباً سنوياً</strong> على ثلاث دفعات (٥٠ طالباً لكل دفعة) من القطاعات الثلاثة.</li>
     <li style="margin-bottom:8px"><strong>إنجاز ٤٥ مشروعاً تطبيقياً سنوياً</strong> بمعدل ٣ مشاريع لكل طالب (شهري + منتصف + ختامي).</li>
     <li style="margin-bottom:8px"><strong>رفع مؤشر «الجاهزية الرقمية» للطلبة</strong> من معدل ٢٫٨/٥ إلى ٤٫٥/٥ خلال ستة أشهر.</li>
     <li style="margin-bottom:8px"><strong>عقد ٥ شراكات صناعية</strong> مع شركات عُمانية لاحتضان مشاريع التخرج.</li>
@@ -1091,7 +1095,7 @@
       </tr>
       <tr>
         <td>تطبيق AI في القطاعات</td>
-        <td>مشاريع تخرج مع شركاء صناعيين (PDO, Asyad, Oman LNG)</td>
+        <td>مشاريع تخرج مع شركاء صناعيين (KPMG, EY, Bank Muscat, Omantel)</td>
         <td class="num">غير مباشرة</td>
       </tr>
       <tr>
@@ -1197,7 +1201,7 @@
   <p class="lead">قبل بناء أي برنامج تدريبي، يجب أن نُجيب بدقة على سؤال: <strong>لمن نُصمّم؟</strong> الإجابة عن هذا السؤال تُحدّد لغة الخطاب، نوعية الأمثلة، الأدوات المختارة، وحتى ساعات اللقاءات.</p>
 
   <h3>التقسيم الأولي</h3>
-  <p>الجمهور المستهدف هو طلبة جامعة مسقط في الكليات الثلاث، في المستويات الدراسية من السنة الثانية حتى السنة الأخيرة. نُقسّمهم وفق ثلاثة أبعاد:</p>
+  <p>الجمهور المستهدف هو طلبة كلية مسقط في القطاعات الثلاثة، في المستويات الدراسية من السنة الثانية حتى السنة الأخيرة. نُقسّمهم وفق ثلاثة أبعاد:</p>
 
   <ul class="clean">
     <li><strong>البعد الأكاديمي:</strong> الكلية والتخصص الدقيق.</li>
@@ -1217,45 +1221,45 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>الهندسة والتقنية</strong></td>
-        <td>هندسة الطاقة المتجددة، هندسة البترول، علوم الحاسوب، الهندسة الكهربائية</td>
-        <td class="num">40%</td>
-        <td>البرمجة، التحليل، نماذج التعلم الآلي، إنترنت الأشياء</td>
+        <td><strong>الأعمال والإدارة</strong></td>
+        <td>المحاسبة، إدارة الأعمال، الموارد البشرية، إدارة المشاريع، الأعمال الرقمية، MBA، الاستدامة</td>
+        <td class="num">50%</td>
+        <td>تَحليل البيانات المالية، أتمتة العمليات، التَّسويق، صياغة العقود والتَّقارير</td>
       </tr>
       <tr>
-        <td><strong>إدارة الأعمال</strong></td>
-        <td>المحاسبة، التمويل (CFA-aligned)، التسويق، الإدارة، الموارد البشرية</td>
+        <td><strong>الحوسبة والبرمجيات</strong></td>
+        <td>علوم الحاسوب، هندسة البرمجيات، نُظم الحاسوب والشَّبكات، تَطوير البرمجيات، الدَّعم التِّقني</td>
         <td class="num">35%</td>
-        <td>تحليل البيانات، إنتاجية، محتوى تسويقي، تنبؤات مالية</td>
+        <td>البرمجة بـ AI، بناء MVPs كاملة، اختبار وتَوثيق آلي، تَكامُل APIs</td>
       </tr>
       <tr>
-        <td><strong>النقل واللوجستيات</strong></td>
-        <td>إدارة سلاسل الإمداد، عمليات الموانئ، النقل البحري والجوي</td>
-        <td class="num">25%</td>
-        <td>تحسين المسارات، تنبؤات الطلب، إدارة المخزون، الصور الفضائية</td>
+        <td><strong>البيانات والأمن السيبراني</strong></td>
+        <td>علم البيانات والتَّحليلات، الأمن السيبراني والأدلة الجَنائية</td>
+        <td class="num">15%</td>
+        <td>نَماذج ML، كَشف الانحياز، تأمين البيانات، التَّحقيق الجَنائي الرَّقمي</td>
       </tr>
     </tbody>
   </table>
 
   <h3>نماذج الشخصيات (Personas)</h3>
-  <p>صُمّم البرنامج بناءً على ثلاث شخصيات افتراضية تمثّل الكليات الثلاث. هذه الشخصيات ليست خيالية، بل مبنية على مقابلات افتراضية مُنمذجة من تجارب فعلية لطلبة جامعيين عُمانيين في المرحلة الجامعية الثانية والثالثة.</p>
+  <p>صُمّم البرنامج بناءً على ثلاث شخصيات افتراضية تمثّل القطاعات الثلاثة. هذه الشخصيات ليست خيالية، بل مبنية على مقابلات افتراضية مُنمذجة من تجارب فعلية لطلبة جامعيين عُمانيين في المرحلة الجامعية الثانية والثالثة.</p>
 
   <div class="card dark" style="margin-top:14px">
-    <h4 style="color:var(--gold-500)">شخصية ١ · مهندس الطاقة المتجددة</h4>
+    <h4 style="color:var(--gold-500)">شخصية ١ · مُهندس برمجيات صاعد</h4>
     <div class="grid-2" style="gap:14px;margin-top:10px">
       <div>
-        <p style="color:var(--cream);font-size:10.5pt"><strong style="color:var(--gold-500)">سالم · 21 عاماً</strong><br>السنة الثالثة · هندسة الطاقة المتجددة</p>
-        <p style="color:var(--cream);font-size:10pt;margin-top:6px"><em style="color:var(--gold-200)">«أبحث عن مشروع تخرّج يلفت انتباه شركة PDO أو Oman LNG. عندي فكرة عن نظام لمراقبة الألواح الشمسية، لكني لا أعرف كيف أُحوّلها لمنتج فعلي.»</em></p>
+        <p style="color:var(--cream);font-size:10.5pt"><strong style="color:var(--gold-500)">سالم · 21 عاماً</strong><br>السنة الثالثة · بكالوريوس علوم الحاسوب — هندسة البرمجيات<br><span style="font-size:9pt;color:var(--gold-200)">University of Malaysia Pahang (UMP)</span></p>
+        <p style="color:var(--cream);font-size:10pt;margin-top:6px"><em style="color:var(--gold-200)">«أكتب كوداً منذ المدرسة، لكنّي أشعر أنّي أتأخّر. زُملائي الآن يَبنون تطبيقات كاملة عبر Copilot وCursor في أيام معدودة. أريد تَعلُّم كيف أُسرّع وأظلّ مُهندساً حقيقياً، لا «ضاغط أزرار».»</em></p>
       </div>
       <div>
         <p style="color:var(--gold-500);font-size:10pt;font-weight:600">احتياجاته من AI:</p>
         <ul style="color:var(--cream);font-size:9.5pt;padding-right:16px;margin-top:4px">
-          <li>تعلم بناء نماذج تنبؤ بإنتاج الطاقة</li>
-          <li>كتابة كود Python مع مساعد AI</li>
-          <li>تحليل بيانات الحساسات IoT</li>
-          <li>بناء لوحة تحكم تفاعلية لمشروع التخرج</li>
+          <li>إتقان GitHub Copilot وCursor كرفيق يومي</li>
+          <li>بناء MVP كامل عبر v0 وBolt.new</li>
+          <li>دمج Claude API في مشروع التخرّج</li>
+          <li>كتابة اختبارات وتوثيق تلقائي بـ AI</li>
         </ul>
-        <p style="color:var(--gold-200);font-size:9.5pt;margin-top:6px"><strong>المسار:</strong> الهندسة والتقنية</p>
+        <p style="color:var(--gold-200);font-size:9.5pt;margin-top:6px"><strong>المسار:</strong> الحوسبة والبرمجيات</p>
       </div>
     </div>
   </div>
@@ -1263,43 +1267,43 @@
 
 <section class="page" data-page="12">
   <div class="card dark">
-    <h4 style="color:var(--gold-500)">شخصية ٢ · محللة مالية مستقبلية</h4>
+    <h4 style="color:var(--gold-500)">شخصية ٢ · مُحاسِبة وريادية أعمال</h4>
     <div class="grid-2" style="gap:14px;margin-top:10px">
       <div>
-        <p style="color:var(--cream);font-size:10.5pt"><strong style="color:var(--gold-500)">ميمونة · 20 عاماً</strong><br>السنة الثانية · المالية والاستثمار (CFA-aligned)</p>
-        <p style="color:var(--cream);font-size:10pt;margin-top:6px"><em style="color:var(--gold-200)">«ChatGPT يُعطيني أرقاماً غير صحيحة عن الشركات العُمانية. أريد أن أتعلم كيف أُحلّل القوائم المالية بـ AI بطريقة موثوقة، وأن أستخدم أدوات لا تُكلّفني.»</em></p>
+        <p style="color:var(--cream);font-size:10.5pt"><strong style="color:var(--gold-500)">ميمونة · 20 عاماً</strong><br>السنة الثانية · بكالوريوس المحاسبة وإدارة الأعمال<br><span style="font-size:9pt;color:var(--gold-200)">University of Stirling (UK)</span></p>
+        <p style="color:var(--cream);font-size:10pt;margin-top:6px"><em style="color:var(--gold-200)">«أتدرَّب صَيفاً في شركة عائلية صغيرة. ChatGPT يُعطيني أرقاماً مُلفَّقة عن السوق العُماني. أريد أدوات أكثر ذكاءً لِتحليل القوائم المالية، وأن أبدأ مشروعاً صغيراً قبل التخرُّج.»</em></p>
       </div>
       <div>
         <p style="color:var(--gold-500);font-size:10pt;font-weight:600">احتياجاتها من AI:</p>
         <ul style="color:var(--cream);font-size:9.5pt;padding-right:16px;margin-top:4px">
-          <li>تحليل ملفات Excel الكبيرة بسرعة</li>
-          <li>قراءة التقارير المالية وتلخيصها</li>
+          <li>تحليل ملفات Excel كبيرة بـ Julius AI</li>
+          <li>قراءة وتلخيص القوائم المالية بـ NotebookLM</li>
           <li>بناء لوحات Power BI ديناميكية</li>
-          <li>إنشاء عروض تقديمية احترافية</li>
-          <li>أتمتة الحسابات الدورية</li>
+          <li>عروض تقديمية احترافية بـ Gamma</li>
+          <li>صياغة خطّة أعمال لمشروعها التجاري</li>
         </ul>
-        <p style="color:var(--gold-200);font-size:9.5pt;margin-top:6px"><strong>المسار:</strong> إدارة الأعمال</p>
+        <p style="color:var(--gold-200);font-size:9.5pt;margin-top:6px"><strong>المسار:</strong> الأعمال والمحاسبة</p>
       </div>
     </div>
   </div>
 
   <div class="card dark" style="margin-top:14px">
-    <h4 style="color:var(--gold-500)">شخصية ٣ · مدير سلاسل إمداد</h4>
+    <h4 style="color:var(--gold-500)">شخصية ٣ · عالمة بيانات وباحثة سيبرانية</h4>
     <div class="grid-2" style="gap:14px;margin-top:10px">
       <div>
-        <p style="color:var(--cream);font-size:10.5pt"><strong style="color:var(--gold-500)">يوسف · 22 عاماً</strong><br>السنة الرابعة · إدارة سلاسل الإمداد واللوجستيات</p>
-        <p style="color:var(--cream);font-size:10pt;margin-top:6px"><em style="color:var(--gold-200)">«تدرّبت في «أسياد» الصيف الماضي، ولاحظت أن كثيراً من قراراتهم لا تزال يدوية. أريد أن أتعلّم بناء نموذج تنبؤ بسيط بالطلب، وأن أعرف كيف أُدير مشروعاً بمساعدة AI.»</em></p>
+        <p style="color:var(--cream);font-size:10.5pt"><strong style="color:var(--gold-500)">عائشة · 22 عاماً</strong><br>السنة الرابعة · بكالوريوس علم البيانات والتحليلات<br><span style="font-size:9pt;color:var(--gold-200)">University of Westminster (UK)</span></p>
+        <p style="color:var(--cream);font-size:10pt;margin-top:6px"><em style="color:var(--gold-200)">«أتعامَل مع مجموعات بيانات ضَخمة في أوراقي البَحثية، وأخشى أن نَموذج Machine Learning واحد خاطئ يَهدِم بَحث سنة كاملة. أريد أن أَحكُم نَتائجَ AI بِعَين ناقدة وأَتعلَّم تأمين البيانات.»</em></p>
       </div>
       <div>
-        <p style="color:var(--gold-500);font-size:10pt;font-weight:600">احتياجاته من AI:</p>
+        <p style="color:var(--gold-500);font-size:10pt;font-weight:600">احتياجاتها من AI:</p>
         <ul style="color:var(--cream);font-size:9.5pt;padding-right:16px;margin-top:4px">
-          <li>تنبؤات الطلب باستخدام البيانات التاريخية</li>
-          <li>تحسين مسارات الشحن (route optimization)</li>
-          <li>قراءة الصور الفضائية للموانئ</li>
-          <li>إدارة المخاطر بأدوات AI</li>
-          <li>أتمتة تقارير الأداء</li>
+          <li>تحليل بيانات معقّدة بـ Code Interpreter</li>
+          <li>بناء نَماذج ML في Google Colab + Gemini</li>
+          <li>قراءة أوراق علمية بسرعة بـ Elicit + SciSpace</li>
+          <li>كَشف الانحياز Bias في نَماذج الـ AI</li>
+          <li>تأمين البيانات وكَشف التَّسريبات</li>
         </ul>
-        <p style="color:var(--gold-200);font-size:9.5pt;margin-top:6px"><strong>المسار:</strong> النقل واللوجستيات</p>
+        <p style="color:var(--gold-200);font-size:9.5pt;margin-top:6px"><strong>المسار:</strong> البيانات والأمن السيبراني</p>
       </div>
     </div>
   </div>
@@ -1486,43 +1490,43 @@
   <!-- Bloom's Pyramid SVG -->
   <svg class="timeline-svg" viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg">
     <!-- Level 1: Remember -->
-    <polygon points="60,380 660,380 600,330 120,330" fill="#7ab59d" stroke="#0a4d3c" stroke-width="1.5"/>
-    <text x="360" y="362" text-anchor="middle" fill="#082c25" font-family="Reem Kufi" font-size="14" font-weight="600">يتذكر · Remember</text>
+    <polygon points="60,380 660,380 600,330 120,330" fill="#ac76b2" stroke="#3d025e" stroke-width="1.5"/>
+    <text x="360" y="362" text-anchor="middle" fill="#260045" font-family="Reem Kufi" font-size="14" font-weight="600">يتذكر · Remember</text>
     <text x="690" y="362" text-anchor="end" fill="#5a6868" font-family="IBM Plex Sans Arabic" font-size="9.5">الشهر ١</text>
 
     <!-- Level 2: Understand -->
-    <polygon points="120,330 600,330 555,285 165,285" fill="#1f8a6f" stroke="#0a4d3c" stroke-width="1.5"/>
+    <polygon points="120,330 600,330 555,285 165,285" fill="#733596" stroke="#3d025e" stroke-width="1.5"/>
     <text x="360" y="313" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="14" font-weight="600">يفهم · Understand</text>
     <text x="690" y="313" text-anchor="end" fill="#5a6868" font-family="IBM Plex Sans Arabic" font-size="9.5">الشهر ١-٢</text>
 
     <!-- Level 3: Apply -->
-    <polygon points="165,285 555,285 510,240 210,240" fill="#0f6b53" stroke="#0a4d3c" stroke-width="1.5"/>
+    <polygon points="165,285 555,285 510,240 210,240" fill="#500a77" stroke="#3d025e" stroke-width="1.5"/>
     <text x="360" y="268" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="14" font-weight="600">يطبّق · Apply</text>
     <text x="690" y="268" text-anchor="end" fill="#5a6868" font-family="IBM Plex Sans Arabic" font-size="9.5">الشهر ٢-٣</text>
 
     <!-- Level 4: Analyze -->
-    <polygon points="210,240 510,240 465,195 255,195" fill="#0a4d3c" stroke="#082c25" stroke-width="1.5"/>
+    <polygon points="210,240 510,240 465,195 255,195" fill="#3d025e" stroke="#260045" stroke-width="1.5"/>
     <text x="360" y="222" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="14" font-weight="600">يُحلّل · Analyze</text>
     <text x="690" y="222" text-anchor="end" fill="#5a6868" font-family="IBM Plex Sans Arabic" font-size="9.5">الشهر ٣-٤</text>
 
     <!-- Level 5: Evaluate -->
-    <polygon points="255,195 465,195 420,150 300,150" fill="#b8893c" stroke="#7a5a1c" stroke-width="1.5"/>
+    <polygon points="255,195 465,195 420,150 300,150" fill="#a88224" stroke="#7a5a1c" stroke-width="1.5"/>
     <text x="360" y="178" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="14" font-weight="600">يُقيّم · Evaluate</text>
     <text x="690" y="178" text-anchor="end" fill="#5a6868" font-family="IBM Plex Sans Arabic" font-size="9.5">الشهر ٤-٥</text>
 
     <!-- Level 6: Create (top) -->
-    <polygon points="300,150 420,150 360,90" fill="#c45c39" stroke="#7a3a1c" stroke-width="1.5"/>
+    <polygon points="300,150 420,150 360,90" fill="#8B2253" stroke="#7a3a1c" stroke-width="1.5"/>
     <text x="360" y="125" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="13" font-weight="700">يُبدع · Create</text>
     <text x="690" y="125" text-anchor="end" fill="#5a6868" font-family="IBM Plex Sans Arabic" font-size="9.5">الشهر ٥-٦</text>
 
     <!-- Title -->
-    <text x="360" y="50" text-anchor="middle" fill="#082c25" font-family="Reem Kufi" font-size="15" font-weight="700">تصنيف بلوم المُعدَّل (Anderson &amp; Krathwohl, 2001)</text>
+    <text x="360" y="50" text-anchor="middle" fill="#260045" font-family="Reem Kufi" font-size="15" font-weight="700">تصنيف بلوم المُعدَّل (Anderson &amp; Krathwohl, 2001)</text>
     <text x="360" y="72" text-anchor="middle" fill="#5a6868" font-family="Reem Kufi" font-size="11">مستويات التفكير في برنامج تأهيل AI</text>
 
     <!-- Side legend -->
-    <text x="30" y="100" fill="#0a4d3c" font-family="Reem Kufi" font-size="10" font-weight="600">عليا</text>
-    <text x="30" y="375" fill="#0a4d3c" font-family="Reem Kufi" font-size="10" font-weight="600">دنيا</text>
-    <line x1="40" y1="115" x2="40" y2="365" stroke="#b8893c" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="30" y="100" fill="#3d025e" font-family="Reem Kufi" font-size="10" font-weight="600">عليا</text>
+    <text x="30" y="375" fill="#3d025e" font-family="Reem Kufi" font-size="10" font-weight="600">دنيا</text>
+    <line x1="40" y1="115" x2="40" y2="365" stroke="#a88224" stroke-width="1" stroke-dasharray="3 3"/>
   </svg>
 
   <h4>تطبيق المستويات على البرنامج</h4>
@@ -1745,14 +1749,14 @@
     <!-- Background gradient -->
     <defs>
       <linearGradient id="timelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#0a4d3c"/>
-        <stop offset="50%" stop-color="#b8893c"/>
-        <stop offset="100%" stop-color="#c45c39"/>
+        <stop offset="0%" stop-color="#3d025e"/>
+        <stop offset="50%" stop-color="#a88224"/>
+        <stop offset="100%" stop-color="#8B2253"/>
       </linearGradient>
     </defs>
 
     <!-- Title -->
-    <text x="400" y="30" text-anchor="middle" fill="#082c25" font-family="Reem Kufi" font-size="16" font-weight="700">الخط الزمني · ٦ أشهر · ٢٤ أسبوعاً · ٩٦ ساعة تدريبية</text>
+    <text x="400" y="30" text-anchor="middle" fill="#260045" font-family="Reem Kufi" font-size="16" font-weight="700">الخط الزمني · ٦ أشهر · ٢٤ أسبوعاً · ٩٦ ساعة تدريبية</text>
 
     <!-- Central horizontal line -->
     <rect x="60" y="225" width="680" height="6" fill="url(#timelineGrad)" rx="3"/>
@@ -1760,90 +1764,90 @@
     <!-- Month circles -->
     <g>
       <!-- M1 -->
-      <circle cx="120" cy="228" r="28" fill="#0a4d3c" stroke="#d4a657" stroke-width="3"/>
-      <text x="120" y="234" text-anchor="middle" fill="#d4a657" font-family="Reem Kufi" font-size="16" font-weight="700">١</text>
-      <text x="120" y="90" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الأول</text>
+      <circle cx="120" cy="228" r="28" fill="#3d025e" stroke="#bda03a" stroke-width="3"/>
+      <text x="120" y="234" text-anchor="middle" fill="#bda03a" font-family="Reem Kufi" font-size="16" font-weight="700">١</text>
+      <text x="120" y="90" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الأول</text>
       <text x="120" y="108" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">أساسيات AI</text>
       <text x="120" y="125" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">وهندسة الأوامر</text>
-      <text x="120" y="148" text-anchor="middle" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
-      <line x1="120" y1="160" x2="120" y2="200" stroke="#b8893c" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <text x="120" y="148" text-anchor="middle" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
+      <line x1="120" y1="160" x2="120" y2="200" stroke="#a88224" stroke-width="1.5" stroke-dasharray="3 3"/>
       <!-- Tools chips -->
-      <rect x="80" y="280" width="80" height="20" rx="10" fill="#e8f1ed" stroke="#0f6b53" stroke-width="1"/>
-      <text x="120" y="294" text-anchor="middle" fill="#0a4d3c" font-family="IBM Plex Sans Arabic" font-size="9">ChatGPT · Claude</text>
+      <rect x="80" y="280" width="80" height="20" rx="10" fill="#f5edf7" stroke="#500a77" stroke-width="1"/>
+      <text x="120" y="294" text-anchor="middle" fill="#3d025e" font-family="IBM Plex Sans Arabic" font-size="9">ChatGPT · Claude</text>
 
       <!-- M2 -->
-      <circle cx="240" cy="228" r="28" fill="#0f6b53" stroke="#d4a657" stroke-width="3"/>
-      <text x="240" y="234" text-anchor="middle" fill="#d4a657" font-family="Reem Kufi" font-size="16" font-weight="700">٢</text>
-      <text x="240" y="90" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الثاني</text>
+      <circle cx="240" cy="228" r="28" fill="#500a77" stroke="#bda03a" stroke-width="3"/>
+      <text x="240" y="234" text-anchor="middle" fill="#bda03a" font-family="Reem Kufi" font-size="16" font-weight="700">٢</text>
+      <text x="240" y="90" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الثاني</text>
       <text x="240" y="108" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">البحث الأكاديمي</text>
       <text x="240" y="125" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">والإنتاجية</text>
-      <text x="240" y="148" text-anchor="middle" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
-      <line x1="240" y1="160" x2="240" y2="200" stroke="#b8893c" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <rect x="200" y="280" width="80" height="20" rx="10" fill="#e8f1ed" stroke="#0f6b53" stroke-width="1"/>
-      <text x="240" y="294" text-anchor="middle" fill="#0a4d3c" font-family="IBM Plex Sans Arabic" font-size="9">NotebookLM · Perplexity</text>
+      <text x="240" y="148" text-anchor="middle" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
+      <line x1="240" y1="160" x2="240" y2="200" stroke="#a88224" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <rect x="200" y="280" width="80" height="20" rx="10" fill="#f5edf7" stroke="#500a77" stroke-width="1"/>
+      <text x="240" y="294" text-anchor="middle" fill="#3d025e" font-family="IBM Plex Sans Arabic" font-size="9">NotebookLM · Perplexity</text>
 
       <!-- M3 -->
-      <circle cx="360" cy="228" r="28" fill="#1f8a6f" stroke="#d4a657" stroke-width="3"/>
-      <text x="360" y="234" text-anchor="middle" fill="#d4a657" font-family="Reem Kufi" font-size="16" font-weight="700">٣</text>
-      <text x="360" y="90" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الثالث</text>
+      <circle cx="360" cy="228" r="28" fill="#733596" stroke="#bda03a" stroke-width="3"/>
+      <text x="360" y="234" text-anchor="middle" fill="#bda03a" font-family="Reem Kufi" font-size="16" font-weight="700">٣</text>
+      <text x="360" y="90" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الثالث</text>
       <text x="360" y="108" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">المحتوى</text>
       <text x="360" y="125" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">الإبداعي</text>
-      <text x="360" y="148" text-anchor="middle" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
-      <line x1="360" y1="160" x2="360" y2="200" stroke="#b8893c" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <rect x="320" y="280" width="80" height="20" rx="10" fill="#faf3e0" stroke="#b8893c" stroke-width="1"/>
+      <text x="360" y="148" text-anchor="middle" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
+      <line x1="360" y1="160" x2="360" y2="200" stroke="#a88224" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <rect x="320" y="280" width="80" height="20" rx="10" fill="#faf3e0" stroke="#a88224" stroke-width="1"/>
       <text x="360" y="294" text-anchor="middle" fill="#7a5a1c" font-family="IBM Plex Sans Arabic" font-size="9">Canva · Leonardo</text>
 
       <!-- M4 -->
-      <circle cx="480" cy="228" r="28" fill="#b8893c" stroke="#082c25" stroke-width="3"/>
+      <circle cx="480" cy="228" r="28" fill="#a88224" stroke="#260045" stroke-width="3"/>
       <text x="480" y="234" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="16" font-weight="700">٤</text>
-      <text x="480" y="90" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الرابع</text>
-      <text x="480" y="108" text-anchor="middle" fill="#c45c39" font-family="Reem Kufi" font-size="10" font-weight="600">المسارات</text>
-      <text x="480" y="125" text-anchor="middle" fill="#c45c39" font-family="Reem Kufi" font-size="10" font-weight="600">التخصصية</text>
-      <text x="480" y="148" text-anchor="middle" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
-      <line x1="480" y1="160" x2="480" y2="200" stroke="#b8893c" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <rect x="430" y="280" width="100" height="20" rx="10" fill="#fbeee8" stroke="#c45c39" stroke-width="1"/>
+      <text x="480" y="90" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الرابع</text>
+      <text x="480" y="108" text-anchor="middle" fill="#8B2253" font-family="Reem Kufi" font-size="10" font-weight="600">المسارات</text>
+      <text x="480" y="125" text-anchor="middle" fill="#8B2253" font-family="Reem Kufi" font-size="10" font-weight="600">التخصصية</text>
+      <text x="480" y="148" text-anchor="middle" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
+      <line x1="480" y1="160" x2="480" y2="200" stroke="#a88224" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <rect x="430" y="280" width="100" height="20" rx="10" fill="#fbeee8" stroke="#8B2253" stroke-width="1"/>
       <text x="480" y="294" text-anchor="middle" fill="#7a3a1c" font-family="IBM Plex Sans Arabic" font-size="9">حسب الكلية ٣ مسارات</text>
 
       <!-- M5 -->
-      <circle cx="600" cy="228" r="28" fill="#d4a657" stroke="#082c25" stroke-width="3"/>
-      <text x="600" y="234" text-anchor="middle" fill="#082c25" font-family="Reem Kufi" font-size="16" font-weight="700">٥</text>
-      <text x="600" y="90" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الخامس</text>
+      <circle cx="600" cy="228" r="28" fill="#bda03a" stroke="#260045" stroke-width="3"/>
+      <text x="600" y="234" text-anchor="middle" fill="#260045" font-family="Reem Kufi" font-size="16" font-weight="700">٥</text>
+      <text x="600" y="90" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر الخامس</text>
       <text x="600" y="108" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">البناء</text>
       <text x="600" y="125" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">والأتمتة</text>
-      <text x="600" y="148" text-anchor="middle" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
-      <line x1="600" y1="160" x2="600" y2="200" stroke="#b8893c" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <rect x="555" y="280" width="90" height="20" rx="10" fill="#faf3e0" stroke="#b8893c" stroke-width="1"/>
+      <text x="600" y="148" text-anchor="middle" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
+      <line x1="600" y1="160" x2="600" y2="200" stroke="#a88224" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <rect x="555" y="280" width="90" height="20" rx="10" fill="#faf3e0" stroke="#a88224" stroke-width="1"/>
       <text x="600" y="294" text-anchor="middle" fill="#7a5a1c" font-family="IBM Plex Sans Arabic" font-size="9">Bolt · v0 · n8n</text>
 
       <!-- M6 -->
-      <circle cx="720" cy="228" r="28" fill="#c45c39" stroke="#082c25" stroke-width="3"/>
+      <circle cx="720" cy="228" r="28" fill="#8B2253" stroke="#260045" stroke-width="3"/>
       <text x="720" y="234" text-anchor="middle" fill="#fbf8ef" font-family="Reem Kufi" font-size="16" font-weight="700">٦</text>
-      <text x="720" y="90" text-anchor="middle" fill="#c45c39" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر السادس</text>
+      <text x="720" y="90" text-anchor="middle" fill="#8B2253" font-family="Reem Kufi" font-size="11" font-weight="700">الشهر السادس</text>
       <text x="720" y="108" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">مشروع</text>
       <text x="720" y="125" text-anchor="middle" fill="#3a424d" font-family="Reem Kufi" font-size="10">التخرّج</text>
-      <text x="720" y="148" text-anchor="middle" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
-      <line x1="720" y1="160" x2="720" y2="200" stroke="#b8893c" stroke-width="1.5" stroke-dasharray="3 3"/>
-      <rect x="680" y="280" width="80" height="20" rx="10" fill="#fbeee8" stroke="#c45c39" stroke-width="1"/>
+      <text x="720" y="148" text-anchor="middle" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9">٤ أسابيع · ١٦ ساعة</text>
+      <line x1="720" y1="160" x2="720" y2="200" stroke="#a88224" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <rect x="680" y="280" width="80" height="20" rx="10" fill="#fbeee8" stroke="#8B2253" stroke-width="1"/>
       <text x="720" y="294" text-anchor="middle" fill="#7a3a1c" font-family="IBM Plex Sans Arabic" font-size="9">Capstone Project</text>
     </g>
 
     <!-- Phase labels above -->
-    <rect x="60" y="345" width="360" height="38" rx="4" fill="rgba(31,138,111,0.15)" stroke="#1f8a6f" stroke-width="1.5" stroke-dasharray="4 2"/>
-    <text x="240" y="368" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="13" font-weight="700">المرحلة الأولى: الجذع المشترك</text>
+    <rect x="60" y="345" width="360" height="38" rx="4" fill="rgba(31,138,111,0.15)" stroke="#733596" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <text x="240" y="368" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="13" font-weight="700">المرحلة الأولى: الجذع المشترك</text>
 
-    <rect x="430" y="345" width="310" height="38" rx="4" fill="rgba(196,92,57,0.15)" stroke="#c45c39" stroke-width="1.5" stroke-dasharray="4 2"/>
-    <text x="585" y="368" text-anchor="middle" fill="#c45c39" font-family="Reem Kufi" font-size="13" font-weight="700">المرحلة الثانية: التخصص + التخرج</text>
+    <rect x="430" y="345" width="310" height="38" rx="4" fill="rgba(196,92,57,0.15)" stroke="#8B2253" stroke-width="1.5" stroke-dasharray="4 2"/>
+    <text x="585" y="368" text-anchor="middle" fill="#8B2253" font-family="Reem Kufi" font-size="13" font-weight="700">المرحلة الثانية: التخصص + التخرج</text>
 
     <!-- Milestones markers -->
-    <text x="60" y="420" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ بدء البرنامج</text>
-    <text x="300" y="420" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ هاكاثون منتصف المسار</text>
-    <text x="540" y="420" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ بدء التخصص</text>
-    <text x="700" y="420" fill="#7a8290" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ التخرّج</text>
+    <text x="60" y="420" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ بدء البرنامج</text>
+    <text x="300" y="420" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ هاكاثون منتصف المسار</text>
+    <text x="540" y="420" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ بدء التخصص</text>
+    <text x="700" y="420" fill="#6b5a6f" font-family="IBM Plex Sans Arabic" font-size="9.5">▼ التخرّج</text>
 
-    <circle cx="50" cy="416" r="4" fill="#0a4d3c"/>
-    <circle cx="290" cy="416" r="4" fill="#b8893c"/>
-    <circle cx="530" cy="416" r="4" fill="#c45c39"/>
-    <circle cx="690" cy="416" r="4" fill="#082c25"/>
+    <circle cx="50" cy="416" r="4" fill="#3d025e"/>
+    <circle cx="290" cy="416" r="4" fill="#a88224"/>
+    <circle cx="530" cy="416" r="4" fill="#8B2253"/>
+    <circle cx="690" cy="416" r="4" fill="#260045"/>
   </svg>
 </section>
 
@@ -1880,32 +1884,32 @@
 
   <div class="grid-3" style="margin-top:14px">
     <div class="card terra">
-      <h4>المسار التقني</h4>
-      <strong>للهندسة والتقنية</strong>
-      <p style="font-size:10pt;margin-top:6px">يُركّز على البرمجة بمساعد AI، نماذج التعلم الآلي، إنترنت الأشياء، ومحاكاة الدوائر.</p>
-      <p style="font-size:9.5pt;margin-top:6px;color:var(--terra)"><strong>الأدوات:</strong> Copilot, Cursor, Colab, Hugging Face, Wolfram</p>
+      <h4>المسار البرمجي</h4>
+      <strong>للحوسبة وهندسة البرمجيات</strong>
+      <p style="font-size:10pt;margin-top:6px">يُركّز على البرمجة المُعزَّزة بـ AI، بناء MVP كامل، اختبار وَتوثيق آلي، ودمج Claude API في تطبيقات حقيقية.</p>
+      <p style="font-size:9.5pt;margin-top:6px;color:var(--terra)"><strong>الأدوات:</strong> GitHub Copilot, Cursor, Replit, v0, Bolt.new</p>
     </div>
     <div class="card terra">
-      <h4>المسار التحليلي</h4>
-      <strong>للأعمال</strong>
-      <p style="font-size:10pt;margin-top:6px">يُركّز على تحليل البيانات المالية، التنبؤات، التسويق الذكي، وأتمتة العمليات الإدارية.</p>
-      <p style="font-size:9.5pt;margin-top:6px;color:var(--terra)"><strong>الأدوات:</strong> Julius, Power BI, ChatGPT Data, HubSpot</p>
+      <h4>المسار التجاري</h4>
+      <strong>للأعمال والمحاسبة وإدارة الموارد البشرية</strong>
+      <p style="font-size:10pt;margin-top:6px">يُركّز على تَحليل المالية والمحاسبة، أتمتة العمليات الإدارية، تَنبُّؤات السوق، وبناء عُروض ولوحات تنفيذية احترافية.</p>
+      <p style="font-size:9.5pt;margin-top:6px;color:var(--terra)"><strong>الأدوات:</strong> Julius AI, Power BI, Gamma, HubSpot CRM</p>
     </div>
     <div class="card terra">
-      <h4>المسار التشغيلي</h4>
-      <strong>للنقل واللوجستيات</strong>
-      <p style="font-size:10pt;margin-top:6px">يُركّز على تحسين المسارات، تنبؤات الطلب، تتبع الشحنات، وتحليل الصور الفضائية.</p>
-      <p style="font-size:9.5pt;margin-top:6px;color:var(--terra)"><strong>الأدوات:</strong> Earth Engine, Power BI, ChatGPT, n8n</p>
+      <h4>المسار البياناتي</h4>
+      <strong>لِعلم البيانات والأمن السيبراني</strong>
+      <p style="font-size:10pt;margin-top:6px">يُركّز على تَحليل البيانات الضَّخمة، بناء نَماذج ML، كَشف الانحياز، تأمين البيانات والأنظمة، والتحقيق الجَنائي الرَّقمي.</p>
+      <p style="font-size:9.5pt;margin-top:6px;color:var(--terra)"><strong>الأدوات:</strong> Colab, Hugging Face, Code Interpreter, Whisper API</p>
     </div>
   </div>
 
-  <h3>محاور المسارات الثلاث في الشهر الرابع</h3>
+  <h3>محاور المسارات الثلاثة في الشهر الرابع</h3>
   <p>تتفرّع المسارات في الشهر الرابع، لكنها تشترك في الشهر الخامس (البناء والأتمتة) والسادس (مشروع التخرّج)، مع توجيه المشاريع وفق التخصص.</p>
 
   <div class="callout tip">
     <div class="icon">★</div>
     <div>
-      <strong>ميزة الجذع المشترك:</strong> يضمن أن جميع الطلبة لديهم أرضية ٌمشتركة، مما يُتيح في الأشهر الأخيرة تشكيل فرق متعددة التخصصات لمشاريع التخرج (مهندس + محلل مالي + لوجستي يبنون معاً نظاماً متكاملاً).
+      <strong>ميزة الجذع المشترك:</strong> يضمن أن جميع الطلبة لديهم أرضية ٌمشتركة، مما يُتيح في الأشهر الأخيرة تشكيل فرق متعددة التخصصات لمشاريع التخرج (مُحاسِب + مُهندس برمجيات + مُحلِّل بيانات يبنون معاً نظاماً متكاملاً).
     </div>
   </div>
 </section>
@@ -2252,7 +2256,7 @@
   <div class="week">
     <h4>الأسبوع السادس · سحر NotebookLM والوثائق الذكية <span class="hours">٤ ساعات</span></h4>
     <div class="topics">
-      <strong>المحاضرة:</strong> NotebookLM: لماذا يُعتبر «أعظم اختراع لطالب الجامعة منذ Google Scholar»؟ كيف يستوعب ٥٠ مصدراً ويُجيب فقط منها (دون هلوسة). توليد ملخصات وخرائط ذهنية وبودكاست تلقائياً. ربطه بـ Google Drive.<br>
+      <strong>المحاضرة:</strong> NotebookLM: لماذا يُعتبر «أعظم اختراع لطالب الكُلية منذ Google Scholar»؟ كيف يستوعب ٥٠ مصدراً ويُجيب فقط منها (دون هلوسة). توليد ملخصات وخرائط ذهنية وبودكاست تلقائياً. ربطه بـ Google Drive.<br>
       <strong>الورشة:</strong> رفع ١٠ ملفات PDF من تخصص الطالب، توليد ملخص شامل + خريطة ذهنية + بودكاست صوتي مدته ١٥ دقيقة + اختبار قصير منها.<br>
       <strong>التحدي:</strong> بناء «كتاب دراسي شخصي» في موضوع مُختار، عبر تجميع ٢٠ مصدراً موثوقاً في NotebookLM، واستخراج ١٠ نقاط محورية مع المراجع.
     </div>
@@ -2312,7 +2316,7 @@
 
   <div class="card accent-l">
     <p style="font-size:10.5pt"><em>«قبل البرنامج، كنتُ أُمضي ١٥ ساعة أسبوعياً في القراءة والتلخيص لمشروع التخرّج. كنت أفتح ٢٠ ورقة PDF، أُلخّصها يدوياً، ثم أحاول ربطها. بعد الشهر الثاني، أصبحتُ أرفع كل الأوراق إلى NotebookLM، أحصل على ملخص مترابط في ساعة، أستمع للبودكاست المُولَّد منها في السيارة، وأكتب القسم النظري من مشروعي خلال ٣ ساعات. وفّرت ١٢ ساعة أُسبوعياً، استثمرتُها في التطبيق العملي والمختبر.»</em></p>
-    <p style="font-size:9.5pt;color:var(--muted);text-align:left;margin-top:8px">— سالم، السنة الرابعة، هندسة الطاقة المتجددة (شخصية تمثيلية)</p>
+    <p style="font-size:9.5pt;color:var(--muted);text-align:left;margin-top:8px">— سالم، السنة الرابعة، هندسة البرمجيات (شخصية تمثيلية)</p>
   </div>
 
   <h3>قواعد ذهبية للبحث الأكاديمي بـ AI</h3>
@@ -2721,21 +2725,21 @@
     <li>اهتمامات الطالب التطبيقية.</li>
   </ul>
 
-  <h3>نظرة عامة على المسارات الثلاث</h3>
+  <h3>نظرة عامة على المسارات الثلاثة</h3>
   <div class="grid-3" style="margin-top:14px">
     <div class="card dark" style="border-right:4px solid var(--terra)">
       <div style="color:var(--gold-500);font-size:9pt;letter-spacing:.2em">TRACK A</div>
-      <h4 style="color:var(--gold-500);margin-top:4px">المسار التقني</h4>
+      <h4 style="color:var(--gold-500);margin-top:4px">المسار البرمجي</h4>
       <p style="color:var(--cream);font-size:10pt;margin-top:6px">للهندسة والتقنية. تركيز على البرمجة بـ AI، التعلم الآلي، وإنترنت الأشياء.</p>
     </div>
     <div class="card dark" style="border-right:4px solid var(--gold-500)">
       <div style="color:var(--gold-500);font-size:9pt;letter-spacing:.2em">TRACK B</div>
-      <h4 style="color:var(--gold-500);margin-top:4px">المسار التحليلي</h4>
+      <h4 style="color:var(--gold-500);margin-top:4px">المسار التجاري</h4>
       <p style="color:var(--cream);font-size:10pt;margin-top:6px">للأعمال والمالية. تركيز على البيانات، التنبؤات، والأتمتة الإدارية.</p>
     </div>
     <div class="card dark" style="border-right:4px solid var(--emerald-500)">
       <div style="color:var(--gold-500);font-size:9pt;letter-spacing:.2em">TRACK C</div>
-      <h4 style="color:var(--gold-500);margin-top:4px">المسار التشغيلي</h4>
+      <h4 style="color:var(--gold-500);margin-top:4px">المسار البياناتي</h4>
       <p style="color:var(--cream);font-size:10pt;margin-top:6px">للنقل واللوجستيات. تركيز على المسارات، التتبع، وتحليل الصور.</p>
     </div>
   </div>
@@ -2743,15 +2747,15 @@
   <div class="callout tip">
     <div class="icon">★</div>
     <div>
-      <strong>المرونة:</strong> يحقّ للطالب اختيار مسار خارج كليته إذا أبدى اهتماماً قوياً (مثلاً: طالب هندسة يختار المسار التحليلي لأن تركيزه ريادة الأعمال). شرط الموافقة من المدرّب والوصول للحد الأدنى من الأداء في الأشهر الثلاثة.
+      <strong>المرونة:</strong> يَحقّ للطالب اختيار مسار خارج تَخصُّصه إذا أبدى اهتماماً قَوياً (مثلاً: طالب أعمال يَختار المسار البرمجي لأنه يَودّ بناء تطبيق لِشركته). شَرط الموافقة من المُدرّب والوصول للحدّ الأدنى من الأداء في الأشهر الثلاثة الأولى.
     </div>
   </div>
 </section>
 
 <section class="page" data-page="35">
   <div class="card terra">
-    <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:.3em;color:var(--terra)">TRACK A · المسار التقني</div>
-    <h3 style="margin-top:6px;color:var(--terra);border:none;padding:0">المسار التقني — للهندسة والتقنية</h3>
+    <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:.3em;color:var(--terra)">TRACK A · المسار البرمجي</div>
+    <h3 style="margin-top:6px;color:var(--terra);border:none;padding:0">المسار البرمجي — للحوسبة وهندسة البرمجيات</h3>
   </div>
 
   <h4>أهداف المسار</h4>
@@ -2797,7 +2801,7 @@
   </div>
 
   <div class="week">
-    <h4>الأسبوع ١٦ · مشروع المسار التقني <span class="hours">٤ ساعات</span></h4>
+    <h4>الأسبوع ١٦ · مشروع المسار البرمجي <span class="hours">٤ ساعات</span></h4>
     <div class="topics">
       <strong>المشروع:</strong> «المراقب الذكي» — نظام بسيط يقرأ بيانات من حساس (محاكاة) أو ملف CSV، يُحلّلها، يكشف الشذوذ، ويُرسل تقريراً تلقائياً. يُسلَّم على شكل: كود Python + تقرير + ڤيديو شرح.
     </div>
@@ -2806,8 +2810,8 @@
 
 <section class="page" data-page="36">
   <div class="card gold">
-    <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:.3em;color:var(--gold-900)">TRACK B · المسار التحليلي</div>
-    <h3 style="margin-top:6px;color:var(--gold-900);border:none;padding:0">المسار التحليلي — للأعمال والمالية</h3>
+    <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:.3em;color:var(--gold-900)">TRACK B · المسار التجاري</div>
+    <h3 style="margin-top:6px;color:var(--gold-900);border:none;padding:0">المسار التجاري — للأعمال والمحاسبة وإدارة الموارد البشرية</h3>
   </div>
 
   <h4>أهداف المسار</h4>
@@ -2853,7 +2857,7 @@
   </div>
 
   <div class="week">
-    <h4>الأسبوع ١٦ · مشروع المسار التحليلي <span class="hours">٤ ساعات</span></h4>
+    <h4>الأسبوع ١٦ · مشروع المسار التجاري <span class="hours">٤ ساعات</span></h4>
     <div class="topics">
       <strong>المشروع:</strong> «لوحة قرار تنفيذي» — تأخذ بيانات شركة وتُحوّلها إلى لوحة Power BI تكشف الأنماط، تُولّد تنبؤات، وتُقدّم توصيات. يُسلَّم: ملف PBIX + ڤيديو شرح + تقرير قرارات.
     </div>
@@ -2862,12 +2866,12 @@
 
 <section class="page" data-page="37">
   <div class="card accent-l" style="background:var(--emerald-50);border-right:4px solid var(--emerald-700)">
-    <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:.3em;color:var(--emerald-700)">TRACK C · المسار التشغيلي</div>
-    <h3 style="margin-top:6px;color:var(--emerald-800);border:none;padding:0">المسار التشغيلي — للنقل واللوجستيات</h3>
+    <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:.3em;color:var(--emerald-700)">TRACK C · المسار البياناتي</div>
+    <h3 style="margin-top:6px;color:var(--emerald-800);border:none;padding:0">المسار البياناتي — لعلم البيانات والأمن السيبراني</h3>
   </div>
 
   <h4>أهداف المسار</h4>
-  <p>يهدف هذا المسار إلى تأهيل طلبة النقل واللوجستيات لاستخدام AI في تحسين سلاسل الإمداد، تتبع الشحنات، تحليل صور الأقمار الصناعية للموانئ والمسارات، والتنبؤ بالطلب في القطاع اللوجستي.</p>
+  <p>يَهدف هذا المسار إلى تأهيل طلبة علم البيانات والأمن السيبراني لاستخدام AI في بناء نَماذج تَنبُّؤية، كَشف الانحياز، تأمين البيانات الحَسّاسة، التَّحقيق الجَنائي الرَّقمي، وتَحليل سُلوك المُستخدِم (UBA) لاكتشاف التَّهديدات.</p>
 
   <h4>الأدوات المتخصصة</h4>
   <div style="margin:10px 0">
@@ -2891,7 +2895,7 @@
   </div>
 
   <div class="week">
-    <h4>الأسبوع ١٤ · التنبؤ بالطلب في سلاسل الإمداد <span class="hours">٤ ساعات</span></h4>
+    <h4>الأسبوع ١٤ · التنبؤ بالطلب في الأمن السيبراني <span class="hours">٤ ساعات</span></h4>
     <div class="topics">
       <strong>المحاضرة:</strong> أثر التنبؤ على المخزون والتدفق النقدي. نماذج التنبؤ الموسمية (Seasonality). أثر الأحداث الاستثنائية على الطلب (تعطل قناة السويس مثالاً).<br>
       <strong>الورشة:</strong> تنبؤ الطلب لمستودع توزيع تموين، اعتماداً على ٢٤ شهراً من البيانات، تحديد مستويات إعادة الطلب.<br>
@@ -2902,21 +2906,21 @@
   <div class="week">
     <h4>الأسبوع ١٥ · صور الأقمار الصناعية + IoT للوجستيات <span class="hours">٤ ساعات</span></h4>
     <div class="topics">
-      <strong>المحاضرة:</strong> Google Earth Engine لتحليل الموانئ والطرق من الفضاء. عدّ السفن المنتظرة في ميناء، رصد الازدحام. ربط البيانات الفضائية بقرارات تشغيلية. تتبع الشحنات الذكية بـ IoT.<br>
+      <strong>المحاضرة:</strong> Google Colab + Gemini كَبيئة عَمل لِعلم البيانات. تَدريب نَماذج ML بسيطة بـ Scikit-learn. كَشف الانحياز في بيانات التَّدريب. أساسيات الأمن السيبراني: OWASP Top 10 وَكَشف الثَّغرات بـ AI.<br>
       <strong>الورشة:</strong> تحليل صور ميناء صحار قبل وبعد توسعة، استخراج ٥ مؤشرات تشغيلية.<br>
       <strong>التحدي:</strong> بناء لوحة معلومات «حال الميناء» تجمع: عدد السفن، مدة الانتظار، الازدحام، الطقس.
     </div>
   </div>
 
   <div class="week">
-    <h4>الأسبوع ١٦ · مشروع المسار التشغيلي <span class="hours">٤ ساعات</span></h4>
+    <h4>الأسبوع ١٦ · مشروع المسار البياناتي <span class="hours">٤ ساعات</span></h4>
     <div class="topics">
-      <strong>المشروع:</strong> «نظام إدارة لوجستي مصغّر» — منصة بسيطة تجمع: بيانات الشحنات، تحسين المسارات، تنبؤ الطلب، تقارير دورية. يُسلَّم: لوحة Power BI + خوارزمية التحسين + تقرير سيناريو.
+      <strong>المشروع:</strong> «نظام كَشف تَهديدات سيبرانية ذكي» — مَنصة تَجمع: بيانات سجلّات الشَّبكة، تَحليل سُلوك المُستخدِم بـ ML، تَنبيهات فَورية، وَتقارير حَوادث جَنائية. يُسلَّم: لَوحة Power BI + نَموذج تَصنيف + تَقرير تَحقيق نَموذجي.
     </div>
   </div>
 
   <h3>الجلسات المشتركة الأسبوعية</h3>
-  <p>رغم انفصال المسارات، تبقى جلسة الخميس (مراجعة الأقران) مشتركة. هذه الجلسة تخلق <strong>التلاقح بين التخصصات</strong>: مهندس يُلهم محلل مالي بفكرة، ولوجستي يقترح حلاً تقنياً.</p>
+  <p>رغم انفصال المسارات، تبقى جلسة الخميس (مراجعة الأقران) مشتركة. هذه الجلسة تخلق <strong>التلاقح بين التخصصات</strong>: مُحاسِب يُلهم مُهندس برمجيات بِفكرة، وعالِم بيانات يَقترح حلاً تَحليلياً.</p>
 
   <div class="pullquote">
     «المسارات تتفرّع لأن المهارات تتعمّق، لكنها تلتقي مرة أخرى في الشهر السادس حين تتشكّل فرق التخرّج متعددة التخصصات.»
@@ -3070,7 +3074,7 @@
       </tr>
       <tr>
         <td><strong>روبوت استفسارات الكلية</strong></td>
-        <td>طلبة جامعة مسقط</td>
+        <td>طلبة كلية مسقط</td>
         <td>Voiceflow + Claude</td>
         <td>الرد على ٩٠٪ من الأسئلة المتكررة</td>
       </tr>
@@ -3124,18 +3128,18 @@
 
   <div class="card" style="background:#0c1722;color:#9eb1b5;font-family:'IBM Plex Sans Arabic',monospace;font-size:9pt;direction:ltr;text-align:left;padding:14px;border:1px solid #1a2a32">
 <pre style="margin:0;color:#9eb1b5">// مثال مبسط لاستدعاء Claude API من تطبيق ويب
-const response = <span style="color:#7ab59d">await</span> fetch(<span style="color:#d4a657">"https://api.anthropic.com/v1/messages"</span>, {
-  method: <span style="color:#d4a657">"POST"</span>,
+const response = <span style="color:#ac76b2">await</span> fetch(<span style="color:#bda03a">"https://api.anthropic.com/v1/messages"</span>, {
+  method: <span style="color:#bda03a">"POST"</span>,
   headers: {
-    <span style="color:#d4a657">"x-api-key"</span>: API_KEY,
-    <span style="color:#d4a657">"anthropic-version"</span>: <span style="color:#d4a657">"2023-06-01"</span>,
-    <span style="color:#d4a657">"content-type"</span>: <span style="color:#d4a657">"application/json"</span>
+    <span style="color:#bda03a">"x-api-key"</span>: API_KEY,
+    <span style="color:#bda03a">"anthropic-version"</span>: <span style="color:#bda03a">"2023-06-01"</span>,
+    <span style="color:#bda03a">"content-type"</span>: <span style="color:#bda03a">"application/json"</span>
   },
   body: JSON.stringify({
-    model: <span style="color:#d4a657">"claude-sonnet-4-20250514"</span>,
-    max_tokens: <span style="color:#e8826a">1024</span>,
+    model: <span style="color:#bda03a">"claude-sonnet-4-20250514"</span>,
+    max_tokens: <span style="color:#b8527e">1024</span>,
     messages: [{
-      role: <span style="color:#d4a657">"user"</span>,
+      role: <span style="color:#bda03a">"user"</span>,
       content: userInput
     }]
   })
@@ -3198,7 +3202,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   <p class="lead">الشهر السادس ليس شهراً لتعلّم مهارات جديدة، بل لتوظيف كل ما تعلّمه الطالب في مشروع واحد متكامل، يُمثّل قمة رحلته في البرنامج. هذا المشروع هو الذي سيعرضه الطالب على أصحاب العمل، يضعه على LinkedIn، ويُقدّمه ضمن ملفه الأكاديمي.</p>
 
   <h3>طبيعة مشروع التخرّج</h3>
-  <p>يُنجَز مشروع التخرّج في فرق متعددة التخصصات (٣–٤ طلبة)، كل فرد منهم من كلية مختلفة. هذا التنوع ليس مصادفة، بل اختيار منهجي يُحاكي بيئة العمل الحقيقية، حيث يلتقي المهندس بالمحلل المالي باللوجستي لحلّ مشكلة مركّبة.</p>
+  <p>يُنجَز مشروع التخرّج في فرق متعددة التخصصات (٣–٤ طلبة)، كل فرد منهم من كلية مختلفة. هذا التنوع ليس مصادفة، بل اختيار منهجي يُحاكي بيئة العمل الحقيقية، حيث يلتقي المُحاسِب بِمهندس البرمجيات بِعالِم البيانات لحلّ مشكلة مركّبة.</p>
 
   <h3>أنواع المشاريع المسموحة</h3>
   <div class="grid-3">
@@ -3420,26 +3424,26 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   <p>هذه أمثلة لمشاريع متعددة التخصصات يُمكن لفرق الطلبة بناؤها:</p>
 
   <div class="card accent-l">
-    <h4>المشروع ١ · «المراقب الذكي للمزارع الشمسية»</h4>
-    <p style="font-size:10.5pt"><strong>الفريق:</strong> مهندس طاقة + محلل مالي + لوجستي.<br>
-    <strong>الفكرة:</strong> نظام يجمع بيانات من حساسات IoT في مزرعة شمسية، يكشف الألواح المعطلة بالصور، يحسب الخسائر المالية المتوقعة، ويُولّد جدول صيانة مُحسَّن للوجستيات.<br>
-    <strong>الأدوات:</strong> ESP32 (محاكاة) + Claude API + Power BI + n8n + Bolt للواجهة.<br>
-    <strong>الجمهور:</strong> شركات الطاقة المتجددة (مثل Nama Power, Shams).</p>
+    <h4>المشروع ١ · «مُساعِد الذَّكاء المالي للأعمال الصَّغيرة»</h4>
+    <p style="font-size:10.5pt"><strong>الفريق:</strong> مُحاسِب + مُهندس برمجيات + عالِم بيانات.<br>
+    <strong>الفكرة:</strong> نظام يَستقبِل فَواتير ومُستندات الـ SMEs العُمانية بِالعربية، يُصنِّفها تلقائياً، يَحسِب الزَّكاة والضَّريبة المُتوقَّعة، يُحلِّل عادات الإنفاق، ويُولِّد تَقارير شَهرية لِلمالك بِلُغة بَسيطة.<br>
+    <strong>الأدوات:</strong> Claude API + Supabase + Julius AI + Power BI + Bolt للواجهة.<br>
+    <strong>الجمهور:</strong> ١٠,٠٠٠+ شَركة صَغيرة ومُتوسّطة في عُمان.</p>
   </div>
 
   <div class="card accent-l">
-    <h4>المشروع ٢ · «المساعد المالي الشخصي لطلبة الجامعات»</h4>
-    <p style="font-size:10.5pt"><strong>الفريق:</strong> محلل مالي + مهندس برمجيات + لوجستي.<br>
-    <strong>الفكرة:</strong> تطبيق يُحلّل عادات إنفاق الطالب، يُقدّم نصائح ادخارية مُخصّصة، يُذكّره بدفعات قروض دراسية، ويُقترح بدائل أرخص للسلع التي يشتريها.<br>
+    <h4>المشروع ٢ · «المُساعِد المالي الشَّخصي لطلبة الكُليات»</h4>
+    <p style="font-size:10.5pt"><strong>الفريق:</strong> مُحاسِب + مُهندس برمجيات + باحث أمن سيبراني.<br>
+    <strong>الفكرة:</strong> تطبيق يُحلّل عادات إنفاق الطالب، يُقدّم نصائح ادخارية مُخصّصة، يُذكّره بدفعات قروض دراسية، ويُقترح بدائل أرخص للسلع التي يَشتريها.<br>
     <strong>الأدوات:</strong> Bolt + Claude API + Supabase + n8n.<br>
-    <strong>الجمهور:</strong> ٣٠٠٠+ طالب جامعي في عُمان.</p>
+    <strong>الجمهور:</strong> ٣٠,٠٠٠+ طالب جامعي وَكُلِّي في عُمان.</p>
   </div>
 
   <div class="card accent-l">
-    <h4>المشروع ٣ · «منصة تحسين سلاسل الإمداد للمصانع الصغيرة»</h4>
-    <p style="font-size:10.5pt"><strong>الفريق:</strong> لوجستي + مهندس + محلل أعمال.<br>
-    <strong>الفكرة:</strong> منصة تأخذ بيانات المخزون والطلب من مصنع صغير عُماني، تُحسّن جدول الإنتاج، تتنبأ بالطلب، وتقترح مسارات الشحن المُثلى. تستهدف ١٠٠ شركة في برنامج «صنع في عُمان».<br>
-    <strong>الأدوات:</strong> Power BI + Claude + OpenRouteService + Earth Engine.</p>
+    <h4>المشروع ٣ · «مَنصة كَشف التَّهديدات السيبرانية للمُؤسَّسات الصَّغيرة»</h4>
+    <p style="font-size:10.5pt"><strong>الفريق:</strong> مُحلِّل أعمال + مُهندس برمجيات + باحث أمن سيبراني.<br>
+    <strong>الفكرة:</strong> مَنصة تَستقبل سجلّات الشَّبكة من مَكاتب صَغيرة، تُحلِّل سُلوك المُستخدمين بـ ML، تَكتشف الأنشطة المَريبة، وتُرسل تَنبيهات فَورية لِمسؤول النِّظام. تَستهدف ٥٠٠ مُؤسَّسة في برنامج «دَعم الـ SMEs».<br>
+    <strong>الأدوات:</strong> Python + Scikit-learn + Claude API + Power BI + OWASP ZAP.</p>
   </div>
 
   <div class="card accent-l">
@@ -3453,7 +3457,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   <h3>ما بعد التخرّج</h3>
   <p>الشهر السادس ليس النهاية، بل البداية. كل طالب يحصل في يوم التخرّج على:</p>
   <ul class="clean">
-    <li><strong>شهادة معتمدة:</strong> من جامعة مسقط و C3 Advisory، قابلة للإضافة على LinkedIn.</li>
+    <li><strong>شهادة معتمدة:</strong> من كلية مسقط و C3 Advisory، قابلة للإضافة على LinkedIn.</li>
     <li><strong>ملف إنجاز رقمي:</strong> e-Portfolio يحوي جميع مشاريع الأشهر الستة.</li>
     <li><strong>توصية مكتوبة:</strong> من المدرب توضّح نقاط قوة الطالب.</li>
     <li><strong>عضوية مجتمع الخريجين:</strong> شبكة تستمر بعد البرنامج لمشاركة الفرص.</li>
@@ -3873,41 +3877,209 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
       </tr>
     </tbody>
   </table>
-<h3 class="cat-h3">الفئة التاسعة · أدوات تخصصية للهندسة</h3>
+<h3 class="cat-h3">الفئة التاسعة · أدوات تخصصية للأعمال والمحاسبة</h3>
   <table>
     <thead><tr><th>الأداة</th><th>الوصف</th></tr></thead>
     <tbody>
-      <tr><td><strong>Tinkercad + AI</strong></td><td>محاكاة الدوائر الإلكترونية مع مساعد ذكي.</td></tr>
-      <tr><td><strong>Wokwi</strong></td><td>محاكاة Arduino وESP32 في المتصفح.</td></tr>
-      <tr><td><strong>Fusion 360 (طلابي)</strong></td><td>تصميم ثلاثي الأبعاد مجاناً للطلبة.</td></tr>
-      <tr><td><strong>SimScale</strong></td><td>محاكاة هندسية سحابية مجانية.</td></tr>
+      <tr><td><strong>HubSpot CRM (مجاني)</strong></td><td>إدارة عَلاقات العُملاء مع ميزات AI ذَكية لِفرق المَبيعات.</td></tr>
+      <tr><td><strong>QuickBooks AI</strong></td><td>مُحاسبة ذَكية لِلأعمال الصَّغيرة مع تَلخيص الإيصالات تلقائياً.</td></tr>
+      <tr><td><strong>Xero AI</strong></td><td>بَديل سَحابي لِلمُحاسبة، تَكامُل مع البنوك العُمانية.</td></tr>
+      <tr><td><strong>Microsoft Excel + Copilot</strong></td><td>تَحليل الجَداول المالية الكبيرة بِأوامر لُغوية.</td></tr>
+      <tr><td><strong>BambooHR + AI</strong></td><td>نظام إدارة موارد بَشرية ذَكي لِلشركات الصَّغيرة.</td></tr>
+      <tr><td><strong>Beautiful.ai</strong></td><td>عُروض تقديمية بِتَصاميم تلقائية لِخطط الأعمال.</td></tr>
     </tbody>
   </table>
 </section>
 
 <section class="page" data-page="51">
-<h3 class="cat-h3 cat-newpage">الفئة العاشرة · أدوات تخصصية للأعمال</h3>
+<h3 class="cat-h3 cat-newpage">الفئة العاشرة · أدوات تخصصية للحوسبة والبرمجيات</h3>
   <table>
     <thead><tr><th>الأداة</th><th>الوصف</th></tr></thead>
     <tbody>
-      <tr><td><strong>HubSpot CRM (مجاني)</strong></td><td>إدارة علاقات العملاء مع ميزات AI.</td></tr>
-      <tr><td><strong>Stripe + AI</strong></td><td>تحليل الإيرادات للشركات الصغيرة.</td></tr>
-      <tr><td><strong>QuickBooks AI</strong></td><td>محاسبة ذكية للأعمال (إصدار تجريبي).</td></tr>
+      <tr><td><strong>Supabase + AI</strong></td><td>قاعدة بيانات سَحابية مع توليد كود تلقائي.</td></tr>
+      <tr><td><strong>Postman AI</strong></td><td>اختبار APIs بِسيناريوهات يُوَلِّدها الـ AI تلقائياً.</td></tr>
+      <tr><td><strong>Vercel v0</strong></td><td>توليد واجهات React + Tailwind كاملة من وَصف نَصّي.</td></tr>
+      <tr><td><strong>Sourcegraph Cody</strong></td><td>مُساعِد ذَكي يَفهم كامل قاعدة الكود (Codebase).</td></tr>
+      <tr><td><strong>Tabnine</strong></td><td>بَديل GitHub Copilot يَعمل محلياً (دون إرسال الكود).</td></tr>
     </tbody>
   </table>
-<h3 class="cat-h3">الفئة الحادية عشرة · أدوات تخصصية للنقل واللوجستيات</h3>
+<h3 class="cat-h3">الفئة الحادية عشرة · أدوات تخصصية للبيانات والأمن السيبراني</h3>
   <table>
     <thead><tr><th>الأداة</th><th>الوصف</th></tr></thead>
     <tbody>
-      <tr><td><strong>Google Earth Engine</strong></td><td>تحليل الصور الفضائية مجاناً للأبحاث.</td></tr>
-      <tr><td><strong>OpenRouteService</strong></td><td>تحسين المسارات وحساب الأزمنة.</td></tr>
-      <tr><td><strong>QGIS</strong></td><td>نظام معلومات جغرافي مفتوح المصدر.</td></tr>
-      <tr><td><strong>SeaRoutes</strong></td><td>تخطيط الطرق البحرية.</td></tr>
+      <tr><td><strong>Google Colab + Gemini</strong></td><td>بيئة Jupyter سَحابية مَع GPU مَجاني وَ AI مُدمَج.</td></tr>
+      <tr><td><strong>Kaggle Datasets + Code</strong></td><td>أكبر مَنصة لِبيانات وَ نَماذج Machine Learning مَجانياً.</td></tr>
+      <tr><td><strong>Hugging Face</strong></td><td>نَماذج AI جاهزة يُمكن تَجريبها وضَبطها بدون كود.</td></tr>
+      <tr><td><strong>OWASP ZAP + AI</strong></td><td>فَحص الأمان لِتَطبيقات الويب مع تَحليل ذَكي.</td></tr>
+      <tr><td><strong>Autopsy</strong></td><td>أداة تَحقيق جَنائي رَقمي مَفتوحة المَصدر.</td></tr>
+      <tr><td><strong>Maltego CE</strong></td><td>تَحليل عَلاقات الشَّبكات وَ OSINT لِلتَّحقيقات.</td></tr>
     </tbody>
   </table>
 </section>
 
 <section class="page" data-page="52">
+<h3 class="cat-h3">الفئة الثانية عشرة · مَنظومة Microsoft للأتمتة والذكاء الاصطناعي</h3>
+  <p style="font-size:9pt;color:var(--muted);margin-top:0;margin-bottom:6px;">منظومة مايكروسوفت تَوفّر طَبقة مَجانية مَدرسية للطلبة (Microsoft 365 Education + Azure for Students $100 رصيد).</p>
+  <table>
+    <thead><tr><th>الأداة</th><th>الوصف والاستخدام</th><th>الطبقة المَجانية</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Microsoft Copilot</strong></td><td>مُحادَثة مَجانية تَستخدم GPT-4 + DALL-E 3، مُدمَج في Windows وEdge.</td><td>كاملة المَجانية</td></tr>
+      <tr><td><strong>Microsoft 365 Copilot</strong></td><td>AI داخل Word, Excel, PowerPoint, Outlook, Teams (تَوليد ملخّصات، صياغة، تَحليل).</td><td>مَجاني للطلبة (Education)</td></tr>
+      <tr><td><strong>Power Automate</strong></td><td>أتمتة سَير العَمل بدون كود: ربط Outlook + Excel + Teams + SharePoint بسلاسل تلقائية.</td><td>مَجاني مع Microsoft 365</td></tr>
+      <tr><td><strong>Copilot Studio</strong></td><td>بناء روبوتات مُحادَثة مُخصَّصة (Copilots) للجامعة أو الشركة بدون كود.</td><td>مَجاني للطلبة</td></tr>
+      <tr><td><strong>Power Apps + AI</strong></td><td>بناء تَطبيقات Low-Code مَع مُكوّنات AI مُدمَجة (AI Builder).</td><td>مَجاني للطلبة</td></tr>
+      <tr><td><strong>Azure AI Foundry</strong></td><td>منصة مُتكاملة لبناء تَطبيقات AI مُؤسَّسية: نَماذج OpenAI + Llama + Mistral.</td><td>$100 رصيد للطلبة</td></tr>
+      <tr><td><strong>Azure Cognitive Services</strong></td><td>خِدمات جاهزة: رؤية حاسوبية، تَفريغ صَوتي، تَرجمة، تَحليل لُغة.</td><td>طَبقة مَجانية شهرياً</td></tr>
+      <tr><td><strong>Microsoft Fabric + Copilot</strong></td><td>مَنصة بيانات سَحابية (Power BI + Data Factory + Synapse) مع AI تَحليلي.</td><td>تَجريبي ٦٠ يوم</td></tr>
+      <tr><td><strong>Microsoft Loop</strong></td><td>مساحات تَعاون حَيّة (مُكوّنات قابلة لِلمزامنة) مع AI مُدمَج لِلكِتابة الجَماعية.</td><td>مَجاني مع 365</td></tr>
+      <tr><td><strong>GitHub Copilot</strong></td><td>مُساعِد بَرمجي ذَكي داخل VSCode وVisual Studio.</td><td>مَجاني للطلبة (GitHub Student Pack)</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="page" data-page="53">
+<h3 class="cat-h3">الفئة الثالثة عشرة · مَنظومة Amazon AWS للأتمتة والذكاء الاصطناعي</h3>
+  <p style="font-size:9pt;color:var(--muted);margin-top:0;margin-bottom:6px;">طَبقة AWS Free Tier مَجانية لِسنة كاملة، إضافة إلى AWS Educate و AWS Activate (للروّاد).</p>
+  <table>
+    <thead><tr><th>الأداة</th><th>الوصف والاستخدام</th><th>الطبقة المَجانية</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Amazon Bedrock</strong></td><td>أكبر مَنصة نَماذج لُغوية مُؤسَّسية (Claude, Llama, Mistral, Titan) في واجهة واحدة.</td><td>تَجريبي مع Free Tier</td></tr>
+      <tr><td><strong>PartyRock</strong></td><td>مَلعب Bedrock لِبناء تَطبيقات AI بدون كود، مَجاني تَماماً للتَّعلُّم.</td><td>مَجاني كلياً</td></tr>
+      <tr><td><strong>Amazon Q Developer</strong></td><td>مُنافس Copilot من AWS: إكمال كود، شَرح، إعادة هَيكلة، فَحص ثَغرات.</td><td>طَبقة مَجانية شَخصية</td></tr>
+      <tr><td><strong>Amazon Q Business</strong></td><td>مُساعِد ذَكي لِلمؤسَّسات يَربط بِبيانات الشركة (Slack, Drive, S3).</td><td>تَجريبي ١٤ يوم</td></tr>
+      <tr><td><strong>Amazon SageMaker</strong></td><td>مَنصة بناء وتَدريب نَماذج ML كاملة: Studio + AutoPilot + Jumpstart.</td><td>SageMaker Studio Lab مَجاني</td></tr>
+      <tr><td><strong>Amazon Lex</strong></td><td>بناء روبوتات مُحادَثة صَوتية ونَصية بنفس تقنية Alexa.</td><td>١٠ آلاف طَلب شَهرياً</td></tr>
+      <tr><td><strong>Amazon Polly</strong></td><td>تَحويل نَصّ إلى صَوت طَبيعي (يَدعم العربية بعِدّة لَهجات).</td><td>٥ ملايين حَرف شهرياً</td></tr>
+      <tr><td><strong>Amazon Transcribe</strong></td><td>تَفريغ صَوتي وفيديو (يَدعم العربية)، تَحديد المُتحدّث تلقائياً.</td><td>٦٠ دقيقة شَهرياً</td></tr>
+      <tr><td><strong>Amazon Comprehend</strong></td><td>تَحليل المَشاعر، استخراج الكَيانات، تَصنيف النصوص.</td><td>٥٠ ألف وَحدة شهرياً</td></tr>
+      <tr><td><strong>Amazon Rekognition</strong></td><td>تَحليل الصور والفيديو: تَعرُّف على الوُجوه، الكِتابة، الأشياء.</td><td>٥ آلاف صورة شهرياً</td></tr>
+      <tr><td><strong>AWS Step Functions</strong></td><td>أتمتة سير عَمل مُعقّد سَحابياً (Workflows) — قابل لِربط جَميع خَدمات AWS.</td><td>٤ آلاف انتقال شَهرياً</td></tr>
+      <tr><td><strong>Amazon Kendra</strong></td><td>بَحث ذَكي داخل وثائق الشركة، مع فَهم لُغوي طَبيعي.</td><td>تَجريبي ٧٥٠ ساعة</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="page" data-page="54">
+  <div class="section-head">
+    <div class="section-num">١٠</div>
+    <div>
+      <h2>وُكَلاء الذكاء الاصطناعي وَالأنظمة المُتعدّدة الوُكلاء</h2>
+      <div class="section-sub">AI Agents · Agentic AI · Multi-Agent Systems (MAS)</div>
+    </div>
+  </div>
+
+  <p class="lead" style="font-size:10.5pt;margin:8px 0">إذا كانت النَّماذج اللُّغوية الكُبرى (LLMs) هي «الدِّماغ»، فإنّ <strong>الوُكلاء</strong> هم «اليَدُ والقَدم». الفَرق الجَوهري: النَّموذج يَقترح، أمّا الوَكيل فيَفعل.</p>
+
+  <h3 style="margin:6px 0 4px;font-size:12pt">ما هو وَكيل الذكاء الاصطناعي (AI Agent)؟</h3>
+  <p style="font-size:10pt;margin:0 0 6px">هو كِيان بَرمجي يَستخدم نَموذجاً لُغوياً كَعَقل، ولكنّه يَمتلِك أيضاً أربع قُدرات أساسية:</p>
+  <div class="grid-2" style="gap:8px">
+    <div class="card accent-l" style="padding:8px 10px">
+      <h4 style="font-size:10pt;margin:0">الأدوات (Tools)</h4>
+      <p style="font-size:9pt;margin:3px 0 0">استدعاء بَرمجي لِأدوات خارجية: API، قاعدة بيانات، مُتصفّح. يُحوّل المُحادَثة إلى فِعل.</p>
+    </div>
+    <div class="card accent-l" style="padding:8px 10px">
+      <h4 style="font-size:10pt;margin:0">الذاكرة (Memory)</h4>
+      <p style="font-size:9pt;margin:3px 0 0">حفظ السِّياق: ذاكرة قَصيرة المَدى (المُحادَثة) وطَويلة المَدى (Vector DB).</p>
+    </div>
+    <div class="card accent-l" style="padding:8px 10px">
+      <h4 style="font-size:10pt;margin:0">التَّخطيط (Planning)</h4>
+      <p style="font-size:9pt;margin:3px 0 0">تَفكيك هَدف كَبير إلى خَطوات، ثم تَنفيذها تَسلسُلياً أو بِالتَّوازي. غالباً نَمَط ReAct.</p>
+    </div>
+    <div class="card accent-l" style="padding:8px 10px">
+      <h4 style="font-size:10pt;margin:0">المُلاحَظة (Observation Loop)</h4>
+      <p style="font-size:9pt;margin:3px 0 0">يُلاحِظ نَتيجة كل فِعل، يُقَيّم، ثم يَتَّخذ القَرار التالي. حَلقة مُغلَقة حتى الهَدف.</p>
+    </div>
+  </div>
+
+  <h3 style="margin:10px 0 4px;font-size:12pt">سُلَّم الوَكالة (Agency Ladder)</h3>
+  <table style="font-size:8.5pt;margin:4px 0">
+    <thead><tr><th style="width:13%">المُستوى</th><th>الوَصف</th><th style="width:30%">مِثال</th></tr></thead>
+    <tbody>
+      <tr><td><strong>٠</strong></td><td>روبوت مُحادَثة بَسيط — يُولّد نَصّاً فقط</td><td>ChatGPT الأصلي</td></tr>
+      <tr><td><strong>١</strong></td><td>نَموذج بِأدوات (Tool-Use) — يَستدعي دوالاً</td><td>Claude Function Calling</td></tr>
+      <tr><td><strong>٢</strong></td><td>وَكيل مُتفاعِل — يَتَّخذ خُطوة واحدة بِناء على هَدف</td><td>Perplexity Pro</td></tr>
+      <tr><td><strong>٣</strong></td><td>وَكيل مُتعدِّد الخُطوات — يُخطِّط ويُنفِّذ بِشكل تَكراري</td><td>AutoGPT, Devin</td></tr>
+      <tr><td><strong>٤</strong></td><td>وَكيل مُستَقِلّ — يُدير مَهامّ طَويلة بِلا تَدخُّل بَشري</td><td>Manus AI, Cursor Agent</td></tr>
+      <tr><td><strong>٥</strong></td><td><strong>نِظام مُتعدّد الوُكلاء (MAS)</strong> — شَبكة وُكلاء مُتعاوِنين</td><td>CrewAI, AutoGen</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2" style="gap:10px;margin-top:8px">
+    <div>
+      <h4 style="font-size:10.5pt;color:var(--gold-700);margin:0 0 4px">الذكاء الاصطناعي الوَكيلي (Agentic AI)</h4>
+      <p style="font-size:9pt;margin:0">مُصطلح ٢٠٢٤–٢٠٢٦ يَصف الذكاء الذي يَعمل بـ«وَكالة» (Agency): يَتَّخذ قَرارات نِيابة، يَسعى نَحو هَدف، ويُكيِّف تَكتيكاته. <strong>Agentic AI تَوجُّه/فَلسفة</strong>، بَينما <strong>AI Agent تَطبيق مَلموس</strong>.</p>
+    </div>
+    <div>
+      <h4 style="font-size:10.5pt;color:var(--gold-700);margin:0 0 4px">الأنظمة مُتعدّدة الوُكلاء (MAS)</h4>
+      <p style="font-size:9pt;margin:0">عَوض وَكيل عَملاق يَقوم بِكلّ شيء، تَنقَسِم المُهمّة على عِدّة وُكلاء مُتخصِّصين (مُحلِّل، باحث، كاتب، مُراجع، مُدير) يَتحاوَرون ويَتعاوَنون. جَودة أعلى، تَعقيد أكبر.</p>
+    </div>
+  </div>
+
+  <div class="callout tip" style="margin-top:8px;padding:8px 12px">
+    <div class="icon">★</div>
+    <div style="font-size:9.5pt"><strong>قاعدة ذَهبية:</strong> ابدأ بِالأبسط. مُعظم المُشكلات تُحلّ بِـ Prompt جَيِّد ثم Tool-Use (المستوى ١). MAS مُعقّد ومُكلِف، لا تَستخدمه إلاّ إذا فَشلت المُستويات الدُّنيا.</div>
+  </div>
+</section>
+
+<section class="page" data-page="55">
+<h3 class="cat-h3">الفئة الرابعة عشرة · أدوات بِناء وَكلاء الذكاء الاصطناعي (AI Agents)</h3>
+  <p style="font-size:9pt;color:var(--muted);margin-top:0;margin-bottom:6px;">أُطر برمجية ومَنصات جاهزة لِبناء وَكلاء أُحاديين قادرين على استخدام الأدوات والتَّخطيط.</p>
+  <table>
+    <thead><tr><th>الأداة</th><th>الوصف</th><th>الطَّبقة المَجانية</th></tr></thead>
+    <tbody>
+      <tr><td><strong>LangChain</strong></td><td>أَشهَر إطار Python لِبناء تَطبيقات LLM ووَكلاء — يَدعم جَميع النَّماذج تقريباً.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>LlamaIndex</strong></td><td>إطار مُتخصّص في RAG (التَّوليد المُعزَّز بالاسترجاع) ووَكلاء يَقرأون مُستندات الشركة.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>Claude Tool Use</strong></td><td>قُدرة Claude الأصلية على استدعاء دوالّ خارجية — أبسط طَريقة لِبناء وَكيل.</td><td>مع Claude API</td></tr>
+      <tr><td><strong>MCP (Model Context Protocol)</strong></td><td>بروتوكول Anthropic المَفتوح لِربط النَّماذج بِأدوات بِيئة المُطوّر (٢٠٢٤).</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>OpenAI Assistants API</strong></td><td>وَكلاء جاهزون عبر API: ذاكرة طويلة، أدوات مُدمَجة، تَفسير كود تلقائي.</td><td>أرصدة OpenAI</td></tr>
+      <tr><td><strong>Claude Computer Use</strong></td><td>وَكيل Anthropic يَتحكَّم بِشاشة الحاسوب: نَقرات، كِتابة، فَتح تَطبيقات.</td><td>تَجريبي للمُطوّرين</td></tr>
+      <tr><td><strong>Cursor Agent</strong></td><td>وَكيل بَرمجي يَكتب كوداً عبر عِدّة ملفّات، يُنفّذ، يَختبر، يُصحّح ذاتياً.</td><td>Pro $20/شهر، طَبقة طُلابية</td></tr>
+      <tr><td><strong>Replit Agent</strong></td><td>وَكيل يَبني تَطبيقاً كاملاً من وَصف بِالعربية، يَكتب الكود ويَنشره مُباشَرة.</td><td>طَبقة مَجانية شَهرية</td></tr>
+      <tr><td><strong>Devin AI</strong></td><td>أوّل «مُهندس برمجيات AI» مُستَقِل من Cognition Labs (٢٠٢٤).</td><td>مَدفوع، قائمة انتظار</td></tr>
+      <tr><td><strong>Manus AI</strong></td><td>وَكيل عامّ صيني يَنفّذ مَهامّ مُعقّدة طَويلة الأمَد (بَحث، حَجز، تَحليل).</td><td>طَبقة تَجريبية</td></tr>
+      <tr><td><strong>Browser Use</strong></td><td>وَكيل مَفتوح المَصدر يَتصفَّح الويب نِيابة عن المُستخدِم.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>AutoGPT / BabyAGI</strong></td><td>أوائل الوُكلاء المُستَقِلين (٢٠٢٣) — مَرجع تَعليمي رَغم تَجاوُزه.</td><td>مَفتوح المَصدر</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="page" data-page="56">
+<h3 class="cat-h3">الفئة الخامسة عشرة · أُطر الأنظمة مُتعدّدة الوُكلاء (MAS Frameworks)</h3>
+  <p style="font-size:9pt;color:var(--muted);margin-top:0;margin-bottom:6px;">أُطر بناء شَبكات وُكلاء مُتعاوِنين بِأدوار مُختلِفة — قِمّة هَرَم الوَكالة الحالي.</p>
+  <table>
+    <thead><tr><th>الأداة</th><th>الوصف والاستخدام</th><th>الطبقة المَجانية</th></tr></thead>
+    <tbody>
+      <tr><td><strong>CrewAI</strong></td><td>الأشهَر — تَعريف فِرَق وُكلاء بِأدوار (مُحلِّل، باحث، كاتب) لإنجاز مَهمّة جَماعية.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>Microsoft AutoGen</strong></td><td>إطار Microsoft لِبناء مُحادَثات بين وُكلاء، يَدعم تَكامُل Azure AI.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>LangGraph</strong></td><td>تَنسيق وُكلاء عبر رُسوم بَيانية موجّهة، تَفرّع شَرطي، مُراجَعة بَشرية.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>MetaGPT</strong></td><td>مُحاكاة شَركة بَرمجيات كاملة: مُدير + مُحلِّل + مُهندس + مُختبر AI.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>OpenAI Swarm</strong></td><td>إطار خَفيف من OpenAI لِتَنسيق عِدّة وُكلاء بِنفس API.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>Magentic-One</strong></td><td>نِظام Microsoft لِوُكلاء يَتعامَلون مع مُتصفّح، ملفّات، وكود.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>Camel-AI</strong></td><td>وُكلاء مُتعاوِنون بِأدوار «مُستخدِم» و«مُساعِد» يَحلّون مُشكلات تَكرارياً.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>Phidata</strong></td><td>إطار سَهل لِبناء فِرَق وُكلاء + ذاكرة + مَعرفة + أدوات.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>ChatDev</strong></td><td>مُحاكاة شَركة برمجيات: مُدير، مُصمّم، مُبرمج، مُختبر — كلّهم وُكلاء AI.</td><td>مَفتوح المَصدر</td></tr>
+      <tr><td><strong>Agency Swarm</strong></td><td>إطار يَستخدم OpenAI Assistants لِبناء «وَكالة» مُتكامِلة.</td><td>مَفتوح المَصدر</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="margin-top:14px;font-size:12pt">تَطبيقات حَسب التَّخصُّص في كلية مسقط</h3>
+  <div class="grid-3" style="gap:8px;">
+    <div class="card gold" style="padding:10px">
+      <h4 style="font-size:11pt">الأعمال والإدارة</h4>
+      <p style="font-size:9pt">فِرَق وُكلاء: مُحلِّل سوق + مُحاسِب + كاتب تَقارير → خُطّة أعمال كاملة في ساعة.</p>
+    </div>
+    <div class="card accent-l" style="padding:10px">
+      <h4 style="font-size:11pt">الحوسبة والبرمجيات</h4>
+      <p style="font-size:9pt">فِرَق وُكلاء: مُحلِّل مُتطلَّبات + مُهندس + مُختبر → MVP من فِكرة إلى نَشر.</p>
+    </div>
+    <div class="card terra" style="padding:10px">
+      <h4 style="font-size:11pt">البيانات والأمن السيبراني</h4>
+      <p style="font-size:9pt">فِرَق وُكلاء: مُحلّل سُلوك + مُكتشِف تَهديدات + مُستجيب → SOC ذَكي ٢٤/٧.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-page="57">
 <h3>سياسة تحديث الكتالوج</h3>
   <p>عالم AI يتغيّر بسرعة جنونية، لذا يلتزم البرنامج بـ:</p>
   <ul class="clean">
@@ -3934,11 +4106,11 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
 </section>
 
-<section class="page" data-page="53">
+<section class="page" data-page="58">
   <div class="section-head">
-    <div class="section-num">١٠</div>
+    <div class="section-num">١١</div>
     <div class="section-title">
-      <div class="eyebrow">القسم العاشر</div>
+      <div class="eyebrow">القسم الحادي عشر</div>
       <h2>التقييم والاعتماد</h2>
     </div>
   </div>
@@ -3984,7 +4156,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   </div>
 </section>
 
-<section class="page" data-page="54">
+<section class="page" data-page="59">
   <h3>روبريك تقييم المشاريع</h3>
   <p>كل مشروع — سواء شهري أو نهائي — يُقيَّم وفق روبريك واضح، شفّاف، مُعلَن مسبقاً للطالب.</p>
 
@@ -4061,7 +4233,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   </div>
 </section>
 
-<section class="page" data-page="55">
+<section class="page" data-page="60">
   <h3>هيكل الشهادات</h3>
   <p>عند اكتمال البرنامج، يحصل الطالب على واحدة من ثلاث شهادات بحسب مستوى الأداء:</p>
 
@@ -4088,7 +4260,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
   <h3>الجهات المُعتمِدة</h3>
   <ul class="clean">
-    <li><strong>جامعة مسقط:</strong> الجهة الأصلية المُصدِرة، بختم رسمي.</li>
+    <li><strong>كلية مسقط:</strong> الجهة الأصلية المُصدِرة، بختم رسمي.</li>
     <li><strong>Google Cloud Skills Boost:</strong> شارات رقمية معترف بها دولياً.</li>
     <li><strong>Microsoft Learn:</strong> شارات Copilot وAI Fundamentals.</li>
     <li><strong>Coursera / edX:</strong> شارات مساعدة عبر دورات مُدمجة.</li>
@@ -4116,11 +4288,11 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
 <!-- SECTION 13: RESOURCES & INFRASTRUCTURE -->
 
-<section class="page" data-page="56">
+<section class="page" data-page="61">
   <div class="section-head">
-    <div class="section-num">١١</div>
+    <div class="section-num">١٢</div>
     <div class="section-title">
-      <div class="eyebrow">القسم الحادي عشر</div>
+      <div class="eyebrow">القسم الثاني عشر</div>
       <h2>الموارد والبنية التحتية</h2>
     </div>
   </div>
@@ -4183,7 +4355,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   </ul>
 </section>
 
-<section class="page" data-page="57">
+<section class="page" data-page="62">
   <h3>الفريق التدريبي</h3>
   <p>نجاح البرنامج يعتمد على فريق تدريبي مُتنوّع، كل عضو فيه يُجلب خبرة محدّدة:</p>
 
@@ -4253,11 +4425,11 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
 <!-- SECTION 14: RISK MANAGEMENT -->
 
-<section class="page" data-page="58">
+<section class="page" data-page="63">
   <div class="section-head">
-    <div class="section-num">١٢</div>
+    <div class="section-num">١٣</div>
     <div class="section-title">
-      <div class="eyebrow">القسم الثاني عشر</div>
+      <div class="eyebrow">القسم الثالث عشر</div>
       <h2>إدارة المخاطر</h2>
     </div>
   </div>
@@ -4280,35 +4452,35 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
         <td><strong>إيقاف الطبقة المجانية لأداة رئيسية</strong></td>
         <td>عالي</td>
         <td>عالي</td>
-        <td style="color:#c45c39"><strong>حرج</strong></td>
+        <td style="color:#8B2253"><strong>حرج</strong></td>
         <td>الاعتماد على ٢–٣ بدائل لكل أداة، تنبيه مبكّر</td>
       </tr>
       <tr>
         <td><strong>تحديث جذري يُغيّر سلوك الأداة</strong></td>
         <td>عالي</td>
         <td>متوسّط</td>
-        <td style="color:#b8893c"><strong>عالي</strong></td>
+        <td style="color:#a88224"><strong>عالي</strong></td>
         <td>تحديث المحتوى ربع سنوياً، فريق رصد دائم</td>
       </tr>
       <tr>
         <td><strong>تسرّب الطلبة (Drop-out)</strong></td>
         <td>متوسط</td>
         <td>عالي</td>
-        <td style="color:#b8893c"><strong>عالي</strong></td>
+        <td style="color:#a88224"><strong>عالي</strong></td>
         <td>تفاعل قوي، مُرشد لكل ٥ طلبة، حوافز</td>
       </tr>
       <tr>
         <td><strong>ضعف انخراط الطلبة في المشاريع</strong></td>
         <td>متوسط</td>
         <td>عالي</td>
-        <td style="color:#b8893c"><strong>عالي</strong></td>
+        <td style="color:#a88224"><strong>عالي</strong></td>
         <td>مشاريع ذات صلة شخصية، فرص عرض حقيقية</td>
       </tr>
       <tr>
         <td><strong>تأخّر تمويل أو تجهيز القاعة</strong></td>
         <td>منخفض</td>
         <td>عالي</td>
-        <td style="color:#b8893c"><strong>متوسط</strong></td>
+        <td style="color:#a88224"><strong>متوسط</strong></td>
         <td>اتفاقية مُبكّرة، بديل قاعة احتياطي</td>
       </tr>
       <tr>
@@ -4329,14 +4501,14 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
         <td><strong>سوء استخدام AI في المهام (غش)</strong></td>
         <td>عالي</td>
         <td>متوسّط</td>
-        <td style="color:#b8893c"><strong>عالي</strong></td>
+        <td style="color:#a88224"><strong>عالي</strong></td>
         <td>تقييم العملية لا النتيجة، عروض شفوية</td>
       </tr>
       <tr>
         <td><strong>قضايا أخلاقية في مشاريع الطلبة</strong></td>
         <td>متوسط</td>
         <td>عالي</td>
-        <td style="color:#b8893c"><strong>عالي</strong></td>
+        <td style="color:#a88224"><strong>عالي</strong></td>
         <td>لجنة مراجعة أخلاقية، شرح مُسبَق للقواعد</td>
       </tr>
       <tr>
@@ -4350,7 +4522,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   </table>
 </section>
 
-<section class="page" data-page="59">
+<section class="page" data-page="64">
   <h3>سياسة استخدام AI في الواجبات</h3>
   <p>هذه القضية حسّاسة. لا نريد منع الطلبة من استخدام أدوات AI، لكن لا نريد أيضاً أن يُسلّموا عملاً ليس عملهم. حلّنا: <strong>الشفافية الكاملة</strong>.</p>
 
@@ -4411,11 +4583,11 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
 <!-- SECTION 16: IMPLEMENTATION & GOVERNANCE -->
 
-<section class="page" data-page="60">
+<section class="page" data-page="65">
   <div class="section-head">
-    <div class="section-num">١٣</div>
+    <div class="section-num">١٤</div>
     <div class="section-title">
-      <div class="eyebrow">القسم الثالث عشر</div>
+      <div class="eyebrow">القسم الرابع عشر</div>
       <h2>التنفيذ والحوكمة</h2>
     </div>
   </div>
@@ -4427,15 +4599,15 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   <svg viewBox="0 0 700 300" style="width:100%; height:auto; margin:14px 0">
     <defs>
       <linearGradient id="phaseGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#0a4d3c"/>
+        <stop offset="0%" stop-color="#3d025e"/>
         <stop offset="100%" stop-color="#1a6b54"/>
       </linearGradient>
       <linearGradient id="phaseGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#b8893c"/>
+        <stop offset="0%" stop-color="#a88224"/>
         <stop offset="100%" stop-color="#d4a85a"/>
       </linearGradient>
       <linearGradient id="phaseGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#c45c39"/>
+        <stop offset="0%" stop-color="#8B2253"/>
         <stop offset="100%" stop-color="#d77b5a"/>
       </linearGradient>
     </defs>
@@ -4443,9 +4615,9 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
     <line x1="40" y1="150" x2="660" y2="150" stroke="#3a3a3a" stroke-width="2"/>
 
     <rect x="40" y="110" width="180" height="80" rx="8" fill="url(#phaseGrad1)"/>
-    <text x="130" y="138" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="14" font-weight="700">المرحلة ١</text>
-    <text x="130" y="160" text-anchor="middle" fill="#f8f3e6" font-family="Tajawal" font-size="11">التحضير</text>
-    <text x="130" y="178" text-anchor="middle" fill="#f8f3e6" font-family="Tajawal" font-size="10">٣ أشهر قبل البدء</text>
+    <text x="130" y="138" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="14" font-weight="700">المرحلة ١</text>
+    <text x="130" y="160" text-anchor="middle" fill="#faf6ee" font-family="Tajawal" font-size="11">التحضير</text>
+    <text x="130" y="178" text-anchor="middle" fill="#faf6ee" font-family="Tajawal" font-size="10">٣ أشهر قبل البدء</text>
 
     <rect x="240" y="110" width="120" height="80" rx="8" fill="url(#phaseGrad2)"/>
     <text x="300" y="138" text-anchor="middle" fill="#1a1410" font-family="Reem Kufi" font-size="14" font-weight="700">المرحلة ٢</text>
@@ -4453,28 +4625,28 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
     <text x="300" y="178" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="10">شهر التسجيل</text>
 
     <rect x="380" y="110" width="220" height="80" rx="8" fill="url(#phaseGrad1)"/>
-    <text x="490" y="138" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="14" font-weight="700">المرحلة ٣</text>
-    <text x="490" y="160" text-anchor="middle" fill="#f8f3e6" font-family="Tajawal" font-size="11">التنفيذ</text>
-    <text x="490" y="178" text-anchor="middle" fill="#f8f3e6" font-family="Tajawal" font-size="10">٦ أشهر تدريب</text>
+    <text x="490" y="138" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="14" font-weight="700">المرحلة ٣</text>
+    <text x="490" y="160" text-anchor="middle" fill="#faf6ee" font-family="Tajawal" font-size="11">التنفيذ</text>
+    <text x="490" y="178" text-anchor="middle" fill="#faf6ee" font-family="Tajawal" font-size="10">٦ أشهر تدريب</text>
 
     <rect x="620" y="110" width="40" height="80" rx="8" fill="url(#phaseGrad3)"/>
-    <text x="640" y="138" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="12" font-weight="700">٤</text>
+    <text x="640" y="138" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="12" font-weight="700">٤</text>
     <text x="640" y="180" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="9">إغلاق</text>
 
-    <text x="130" y="95" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">سبتمبر–نوفمبر ٢٠٢٦</text>
-    <text x="300" y="95" text-anchor="middle" fill="#b8893c" font-family="Reem Kufi" font-size="11" font-weight="700">ديسمبر ٢٠٢٦</text>
-    <text x="490" y="95" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="11" font-weight="700">يناير–يونيو ٢٠٢٧</text>
-    <text x="640" y="95" text-anchor="middle" fill="#c45c39" font-family="Reem Kufi" font-size="11" font-weight="700">يوليو</text>
+    <text x="130" y="95" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">سبتمبر–نوفمبر ٢٠٢٦</text>
+    <text x="300" y="95" text-anchor="middle" fill="#a88224" font-family="Reem Kufi" font-size="11" font-weight="700">ديسمبر ٢٠٢٦</text>
+    <text x="490" y="95" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="11" font-weight="700">يناير–يونيو ٢٠٢٧</text>
+    <text x="640" y="95" text-anchor="middle" fill="#8B2253" font-family="Reem Kufi" font-size="11" font-weight="700">يوليو</text>
 
     <text x="130" y="220" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="10">اعتماد، تجنيد، تصميم</text>
     <text x="300" y="220" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="10">تسجيل، اختبار قبول</text>
     <text x="490" y="220" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="10">تنفيذ ٦ شهور بالكامل</text>
     <text x="640" y="220" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="10">تخرّج</text>
 
-    <circle cx="130" cy="150" r="6" fill="#0a4d3c"/>
-    <circle cx="300" cy="150" r="6" fill="#b8893c"/>
-    <circle cx="490" cy="150" r="6" fill="#0a4d3c"/>
-    <circle cx="640" cy="150" r="6" fill="#c45c39"/>
+    <circle cx="130" cy="150" r="6" fill="#3d025e"/>
+    <circle cx="300" cy="150" r="6" fill="#a88224"/>
+    <circle cx="490" cy="150" r="6" fill="#3d025e"/>
+    <circle cx="640" cy="150" r="6" fill="#8B2253"/>
 
     <text x="350" y="30" text-anchor="middle" fill="#1a1410" font-family="Reem Kufi" font-size="16" font-weight="700">خارطة طريق البرنامج · ١٠ أشهر إجمالية</text>
     <text x="350" y="50" text-anchor="middle" fill="#3a3a3a" font-family="Tajawal" font-size="11">٤ مراحل من اعتماد الخطّة حتى تخرّج الدفعة الأولى</text>
@@ -4491,47 +4663,47 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   </table>
 </section>
 
-<section class="page" data-page="61">
+<section class="page" data-page="66">
   <h3>هيكل الحوكمة</h3>
   <svg viewBox="0 0 700 360" style="width:100%; height:auto; margin:14px 0">
     <defs>
       <linearGradient id="govGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#0a4d3c"/>
+        <stop offset="0%" stop-color="#3d025e"/>
         <stop offset="100%" stop-color="#1a6b54"/>
       </linearGradient>
     </defs>
 
     <rect x="250" y="20" width="200" height="60" rx="8" fill="url(#govGrad1)"/>
-    <text x="350" y="48" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="14" font-weight="700">اللجنة التوجيهية</text>
-    <text x="350" y="68" text-anchor="middle" fill="#f8f3e6" font-family="Tajawal" font-size="10">عميد + مدراء الكليات + ممثل OITS</text>
+    <text x="350" y="48" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="14" font-weight="700">اللجنة التوجيهية</text>
+    <text x="350" y="68" text-anchor="middle" fill="#faf6ee" font-family="Tajawal" font-size="10">عميد + مدراء الكليات + ممثل OITS</text>
 
-    <line x1="350" y1="80" x2="350" y2="110" stroke="#0a4d3c" stroke-width="2"/>
+    <line x1="350" y1="80" x2="350" y2="110" stroke="#3d025e" stroke-width="2"/>
 
-    <rect x="270" y="110" width="160" height="50" rx="8" fill="#b8893c"/>
+    <rect x="270" y="110" width="160" height="50" rx="8" fill="#a88224"/>
     <text x="350" y="135" text-anchor="middle" fill="#1a1410" font-family="Reem Kufi" font-size="13" font-weight="700">قائد البرنامج</text>
     <text x="350" y="152" text-anchor="middle" fill="#1a1410" font-family="Tajawal" font-size="10">المسؤول التشغيلي اليومي</text>
 
-    <line x1="350" y1="160" x2="350" y2="180" stroke="#0a4d3c" stroke-width="2"/>
-    <line x1="150" y1="180" x2="550" y2="180" stroke="#0a4d3c" stroke-width="2"/>
-    <line x1="150" y1="180" x2="150" y2="210" stroke="#0a4d3c" stroke-width="2"/>
-    <line x1="350" y1="180" x2="350" y2="210" stroke="#0a4d3c" stroke-width="2"/>
-    <line x1="550" y1="180" x2="550" y2="210" stroke="#0a4d3c" stroke-width="2"/>
+    <line x1="350" y1="160" x2="350" y2="180" stroke="#3d025e" stroke-width="2"/>
+    <line x1="150" y1="180" x2="550" y2="180" stroke="#3d025e" stroke-width="2"/>
+    <line x1="150" y1="180" x2="150" y2="210" stroke="#3d025e" stroke-width="2"/>
+    <line x1="350" y1="180" x2="350" y2="210" stroke="#3d025e" stroke-width="2"/>
+    <line x1="550" y1="180" x2="550" y2="210" stroke="#3d025e" stroke-width="2"/>
 
-    <rect x="60" y="210" width="180" height="60" rx="6" fill="#f8f3e6" stroke="#0a4d3c" stroke-width="2"/>
-    <text x="150" y="235" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="12" font-weight="700">الفريق الأكاديمي</text>
+    <rect x="60" y="210" width="180" height="60" rx="6" fill="#faf6ee" stroke="#3d025e" stroke-width="2"/>
+    <text x="150" y="235" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="12" font-weight="700">الفريق الأكاديمي</text>
     <text x="150" y="253" text-anchor="middle" fill="#3a3a3a" font-family="Tajawal" font-size="9">مُدرّبون + مُساعدون</text>
 
-    <rect x="260" y="210" width="180" height="60" rx="6" fill="#f8f3e6" stroke="#0a4d3c" stroke-width="2"/>
-    <text x="350" y="235" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="12" font-weight="700">فريق العمليات</text>
+    <rect x="260" y="210" width="180" height="60" rx="6" fill="#faf6ee" stroke="#3d025e" stroke-width="2"/>
+    <text x="350" y="235" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="12" font-weight="700">فريق العمليات</text>
     <text x="350" y="253" text-anchor="middle" fill="#3a3a3a" font-family="Tajawal" font-size="9">لوجستيات + تواصل</text>
 
-    <rect x="460" y="210" width="180" height="60" rx="6" fill="#f8f3e6" stroke="#0a4d3c" stroke-width="2"/>
-    <text x="550" y="235" text-anchor="middle" fill="#0a4d3c" font-family="Reem Kufi" font-size="12" font-weight="700">فريق التقييم</text>
+    <rect x="460" y="210" width="180" height="60" rx="6" fill="#faf6ee" stroke="#3d025e" stroke-width="2"/>
+    <text x="550" y="235" text-anchor="middle" fill="#3d025e" font-family="Reem Kufi" font-size="12" font-weight="700">فريق التقييم</text>
     <text x="550" y="253" text-anchor="middle" fill="#3a3a3a" font-family="Tajawal" font-size="9">قياس + جودة</text>
 
-    <rect x="200" y="300" width="300" height="50" rx="8" fill="#c45c39"/>
-    <text x="350" y="325" text-anchor="middle" fill="#f8f3e6" font-family="Reem Kufi" font-size="13" font-weight="700">مجلس استشاري خارجي</text>
-    <text x="350" y="342" text-anchor="middle" fill="#f8f3e6" font-family="Tajawal" font-size="10">خبراء صناعة + خرّيجون متميّزون</text>
+    <rect x="200" y="300" width="300" height="50" rx="8" fill="#8B2253"/>
+    <text x="350" y="325" text-anchor="middle" fill="#faf6ee" font-family="Reem Kufi" font-size="13" font-weight="700">مجلس استشاري خارجي</text>
+    <text x="350" y="342" text-anchor="middle" fill="#faf6ee" font-family="Tajawal" font-size="10">خبراء صناعة + خرّيجون متميّزون</text>
   </svg>
 
   <h3>إيقاع الاجتماعات</h3>
@@ -4558,9 +4730,9 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- PAGE 62 - KPIs & Evaluation : Framework + Outputs/Outcomes -->
 <!-- ========================================================== -->
-<section class="page" data-page="62">
+<section class="page" data-page="67">
   <div class="section-head">
-    <div class="section-num">١٤</div>
+    <div class="section-num">١٥</div>
     <div>
       <h2>مؤشّرات الأداء والتقييم</h2>
       <div class="section-sub">قياس النجاح عبر أربعة محاور: المُخرَجات، النتائج، الأثر، الاستدامة</div>
@@ -4632,7 +4804,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- PAGE 63 - Impact + Sustainability + Reports + Improvement -->
 <!-- ========================================================== -->
-<section class="page" data-page="63">
+<section class="page" data-page="68">
   <h3>المحور الثالث: مؤشّرات الأثر (Impact) — كيف تَغيَّر الواقع؟</h3>
   <table>
     <thead>
@@ -4651,15 +4823,15 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   <h3>المحور الرابع: مؤشّرات الاستدامة (Sustainability)</h3>
   <div class="grid-3">
     <div class="card">
-      <h4 style="color:#0a4d3c;">المُحتوى</h4>
+      <h4 style="color:#3d025e;">المُحتوى</h4>
       <p>تَحديث المنهج كلَّ ٦ أشهر بناءً على التطوُّرات. مُراجعة المراجع كلَّ ٣ أشهر. أرشيف رقمي مفتوح.</p>
     </div>
     <div class="card">
-      <h4 style="color:#b8893c;">القُدرات البشرية</h4>
+      <h4 style="color:#a88224;">القُدرات البشرية</h4>
       <p>تَدريب ٣ مُدرّبين جُدد سنوياً. تَطوير برنامج «مُدرّب المُدرّبين». استقطاب الخرّيجين كمُساعدين.</p>
     </div>
     <div class="card">
-      <h4 style="color:#c45c39;">التمويل</h4>
+      <h4 style="color:#8B2253;">التمويل</h4>
       <p>تَنويع مصادر التمويل: شراكات صناعية، رعاية، رسوم رمزية، منح. هدف: تَغطية ٧٠٪ من التكاليف ذاتياً بحلول السنة الثالثة.</p>
     </div>
   </div>
@@ -4705,9 +4877,9 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- PAGE 64 - Appendix A: Weekly Lesson Plan + B: Capstone -->
 <!-- ========================================================== -->
-<section class="page" data-page="64">
+<section class="page" data-page="69">
   <div class="section-head">
-    <div class="section-num">١٥</div>
+    <div class="section-num">١٦</div>
     <div>
       <h2>المُلحقات</h2>
       <div class="section-sub">قوالب جاهزة، نماذج، ومراجع تنفيذية</div>
@@ -4717,62 +4889,65 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
   <h3>المُلحَق (أ): قالب خطّة الدرس الأسبوعية</h3>
   <table>
     <tbody>
-      <tr><td style="width:30%;background:#0a4d3c;color:#f8f3e6;font-weight:700;">الأسبوع رقم / العنوان</td><td>........... / ...........</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">المُدرّب</td><td>...........</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">الأهداف التعليمية (Bloom)</td><td>١. ........... | ٢. ........... | ٣. ...........</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">المفاهيم الرئيسة</td><td>...........</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">الأدوات المُستخدَمة</td><td>...........</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">جلسة الافتتاح (٢٠ د)</td><td>تَفعيل المعرفة السابقة + سؤال مُحفِّز</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">جلسة الشرح (٤٠ د)</td><td>عَرض مفاهيمي + أمثلة + Demo حيّ</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">جلسة التطبيق (٦٠ د)</td><td>تَمارين فردية ثم زوجية ثم جماعية</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">جلسة العَرض والتغذية (٤٠ د)</td><td>عَرض ٣–٤ نَماذج + نقاش</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">التأمّل والمُهمَّة (٢٠ د)</td><td>تأمّل فردي + إعلان واجب الأسبوع</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">التقييم التكويني</td><td>سؤال خروج (Exit Ticket) + رَصد المُشاركة</td></tr>
-      <tr><td style="background:#0a4d3c;color:#f8f3e6;font-weight:700;">المراجع والقراءات</td><td>...........</td></tr>
+      <tr><td style="width:30%;background:#3d025e;color:#faf6ee;font-weight:700;">الأسبوع رقم / العنوان</td><td>........... / ...........</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">المُدرّب</td><td>...........</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">الأهداف التعليمية (Bloom)</td><td>١. ........... | ٢. ........... | ٣. ...........</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">المفاهيم الرئيسة</td><td>...........</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">الأدوات المُستخدَمة</td><td>...........</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">جلسة الافتتاح (٢٠ د)</td><td>تَفعيل المعرفة السابقة + سؤال مُحفِّز</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">جلسة الشرح (٤٠ د)</td><td>عَرض مفاهيمي + أمثلة + Demo حيّ</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">جلسة التطبيق (٦٠ د)</td><td>تَمارين فردية ثم زوجية ثم جماعية</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">جلسة العَرض والتغذية (٤٠ د)</td><td>عَرض ٣–٤ نَماذج + نقاش</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">التأمّل والمُهمَّة (٢٠ د)</td><td>تأمّل فردي + إعلان واجب الأسبوع</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">التقييم التكويني</td><td>سؤال خروج (Exit Ticket) + رَصد المُشاركة</td></tr>
+      <tr><td style="background:#3d025e;color:#faf6ee;font-weight:700;">المراجع والقراءات</td><td>...........</td></tr>
     </tbody>
   </table>
 
-  <h3>المُلحَق (ب): نماذج المشاريع الختامية حسب الكلية</h3>
+  <h3>المُلحَق (ب): نَماذج مَشاريع التَّخرُّج حسب القطاع</h3>
   <div class="grid-3">
     <div class="card accent-l">
-      <h4>كلية الهندسة والتقنية</h4>
+      <h4>قطاع الأعمال والإدارة</h4>
       <ul class="clean">
-        <li>نِظام ذكي لمُراقبة كفاءة الطاقة المُتجدّدة في الحرم الجامعي.</li>
-        <li>مُساعد ذكاء اصطناعي لتشخيص أعطال السيارات (مشروع للهندسة الميكانيكية).</li>
-        <li>تطبيق Computer Vision لقياس جودة الإنشاءات.</li>
-        <li>روبوت محادثة هندسي يُجيب عن أسئلة Civil Engineering.</li>
+        <li>مُحاسِب ذكي عَربي لِشركات الـ SMEs العُمانية (تَلخيص فواتير، تَنبيهات ضَريبية).</li>
+        <li>لَوحة قيادة Power BI لِتحليل أداء سوق مسقط للأوراق المالية.</li>
+        <li>أداة فَرز سِير ذاتية (CV Screening) للموارد البَشرية باستخدام Claude API.</li>
+        <li>مُساعِد ذكي لِكِتابة العُقود التِّجارية والقانونية بِالعربية.</li>
+        <li>نظام تَخطيط مَشاريع (PM) يُحلّل المخاطر تلقائياً.</li>
       </ul>
     </div>
     <div class="card gold">
-      <h4>كلية الأعمال والإدارة</h4>
+      <h4>قطاع الحوسبة والبرمجيات</h4>
       <ul class="clean">
-        <li>لوحة قيادة مالية ذكية لتحليل أداء شركات سوق مسقط.</li>
-        <li>نِظام تَوصية للاستثمار (CFA-aligned) باستخدام Claude API.</li>
-        <li>مُساعد محاسبي ذكي لِتحليل البيانات المالية.</li>
-        <li>أداة تَنبُّؤ بالطلب لشركات التجزئة العُمانية.</li>
+        <li>تَطبيق ويب كامل عبر v0 + Bolt.new لِحلّ مُشكلة جامعية حقيقية.</li>
+        <li>إضافة Chrome (Extension) تُسرّع مهامّ الطلبة الأكاديمية.</li>
+        <li>API خَدمة Claude مُكامَل مع موقع Mock للأعمال الصَّغيرة.</li>
+        <li>نظام مُراقبة شَبكة (Network Monitor) بِواجهة AI تَشخيصية.</li>
+        <li>روبوت دَعم تِقني عربي لِخدمة المُستخدِم الأخير.</li>
       </ul>
     </div>
     <div class="card terra">
-      <h4>كلية النقل والإمداد</h4>
+      <h4>قطاع البيانات والأمن السيبراني</h4>
       <ul class="clean">
-        <li>نِظام تَتبُّع الشحنات الذكي عبر موانئ سلطنة عُمان.</li>
-        <li>مُحسِّن مسارات النَّقل عبر الذكاء الاصطناعي (مَدّ خَيار العَين الذكية).</li>
-        <li>نموذج تَنبُّؤ بالاختناقات اللوجستية.</li>
-        <li>روبوت محادثة لِخدمة عُملاء شركات الشحن.</li>
+        <li>نَموذج ML لِتَوقُّع ميل الطلاب لِلتَّسرُّب الأكاديمي (Predictive Analytics).</li>
+        <li>أداة كَشف الانحياز (Bias Detection) في نَماذج LLMs لِلغة العربية.</li>
+        <li>نظام تَحقيق جَنائي رَقمي يَستخدم OCR + AI لِتحليل الأدلّة.</li>
+        <li>كاشف التَّسريبات (Data Leak Scanner) لِملفّات الشركات الصَّغيرة.</li>
+        <li>نظام إنذار سيبراني مبكِّر يَعتمد على تَحليل سُلوك المُستخدِم (UBA).</li>
       </ul>
     </div>
   </div>
 
   <div class="callout tip">
     <div class="icon">i</div>
-    <div><strong>معايير المشروع الناجح:</strong> أصالة الفكرة (٢٠٪) + جَودة التنفيذ (٣٠٪) + قابلية التطبيق (٢٠٪) + جَودة العَرض (١٥٪) + الأثر المُحتمل (١٥٪).</div>
+    <div><strong>معايير المشروع الناجح:</strong> أصالة الفكرة (٢٠٪) + جَودة التَّنفيذ (٣٠٪) + قابلية التَّطبيق (٢٠٪) + جَودة العَرض (١٥٪) + الأثر المُحتمَل (١٥٪).</div>
   </div>
 </section>
 
 <!-- ========================================================== -->
 <!-- PAGE 65 - Appendix C, D, E -->
 <!-- ========================================================== -->
-<section class="page" data-page="65">
+<section class="page" data-page="70">
   <h3>المُلحَق (ج): معايير اختيار المُتحدّثين الضيوف</h3>
   <table>
     <thead><tr><th>المعيار</th><th>الوزن</th><th>التفاصيل</th></tr></thead>
@@ -4787,8 +4962,8 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
   <h3>المُلحَق (د): ميثاق سلوك الطالب في البرنامج</h3>
   <div class="card dark">
-    <p style="color:#f8f3e6;line-height:1.9;">بصفتي مُشاركاً في برنامج تأهيل الذكاء الاصطناعي بجامعة مسقط، أتعهَّد بما يلي:</p>
-    <ol style="color:#f8f3e6;line-height:1.9;padding-right:1.5rem;">
+    <p style="color:#faf6ee;line-height:1.9;">بصفتي مُشاركاً في برنامج تأهيل الذكاء الاصطناعي بكلية مسقط، أتعهَّد بما يلي:</p>
+    <ol style="color:#faf6ee;line-height:1.9;padding-right:1.5rem;">
       <li>الالتزام بحضور الجلسات في مواعيدها مع إعلام المُدرّب مُسبَقاً بأيّ غياب.</li>
       <li>الإفصاح الكامل والصريح عن استخدام أيّ أداة ذكاء اصطناعي في أعمالي.</li>
       <li>احترام الأقران والمُدرّبين وعدم التَّحرُّش أو التَّمييز بأيّ شكل.</li>
@@ -4800,21 +4975,21 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
       <li>تَقديم تغذية راجعة بنّاءة وصادقة.</li>
       <li>تمثيل قِيَم الجامعة والسلطنة في كل ما أَنتجه.</li>
     </ol>
-    <p style="color:#b8893c;text-align:left;margin-top:1rem;">التوقيع: ........... &nbsp;&nbsp; التاريخ: ...........</p>
+    <p style="color:#a88224;text-align:left;margin-top:1rem;">التوقيع: ........... &nbsp;&nbsp; التاريخ: ...........</p>
   </div>
 
   <h3>المُلحَق (هـ): نموذج إقرار استخدام الذكاء الاصطناعي</h3>
   <table>
     <tbody>
-      <tr><td style="width:35%;background:#b8893c;color:#1a1410;font-weight:700;">اسم الطالب</td><td>...........</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">اسم المشروع/الواجب</td><td>...........</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">الأدوات المُستخدَمة</td><td>☐ ChatGPT ☐ Claude ☐ Gemini ☐ NotebookLM ☐ Perplexity ☐ أخرى: ...........</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">طبيعة الاستخدام</td><td>☐ بحث ☐ كتابة ☐ تحليل بيانات ☐ توليد كود ☐ توليد صور ☐ ترجمة ☐ أخرى</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">نسبة المُساهَمة الذاتية</td><td>........... ٪</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">عيّنة Prompts المُستخدَمة</td><td>...........</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">كيف تحقَّقتُ من النتائج</td><td>...........</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">إقرار</td><td>أُقِرُّ بصِحّة المعلومات أعلاه، ومسؤوليتي الكاملة عن المُحتوى المُقدَّم.</td></tr>
-      <tr><td style="background:#b8893c;color:#1a1410;font-weight:700;">التوقيع/التاريخ</td><td>...........</td></tr>
+      <tr><td style="width:35%;background:#a88224;color:#1a1410;font-weight:700;">اسم الطالب</td><td>...........</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">اسم المشروع/الواجب</td><td>...........</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">الأدوات المُستخدَمة</td><td>☐ ChatGPT ☐ Claude ☐ Gemini ☐ NotebookLM ☐ Perplexity ☐ أخرى: ...........</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">طبيعة الاستخدام</td><td>☐ بحث ☐ كتابة ☐ تحليل بيانات ☐ توليد كود ☐ توليد صور ☐ ترجمة ☐ أخرى</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">نسبة المُساهَمة الذاتية</td><td>........... ٪</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">عيّنة Prompts المُستخدَمة</td><td>...........</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">كيف تحقَّقتُ من النتائج</td><td>...........</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">إقرار</td><td>أُقِرُّ بصِحّة المعلومات أعلاه، ومسؤوليتي الكاملة عن المُحتوى المُقدَّم.</td></tr>
+      <tr><td style="background:#a88224;color:#1a1410;font-weight:700;">التوقيع/التاريخ</td><td>...........</td></tr>
     </tbody>
   </table>
 </section>
@@ -4822,16 +4997,16 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- PAGE 66 - Appendix F: Key Contacts + Glossary -->
 <!-- ========================================================== -->
-<section class="page" data-page="66">
+<section class="page" data-page="71">
   <h3>المُلحَق (و): جِهات الاتصال الرئيسة</h3>
   <table>
     <thead><tr><th>الجِهة</th><th>المسؤولية</th><th>التواصل</th></tr></thead>
     <tbody>
-      <tr><td>قائد البرنامج</td><td>الإدارة التشغيلية اليومية</td><td>director@muscatuni-ai.om</td></tr>
-      <tr><td>مكتب البرنامج</td><td>التَّسجيل، الاستفسارات</td><td>info@muscatuni-ai.om</td></tr>
-      <tr><td>الفريق الأكاديمي</td><td>الشؤون التعليمية</td><td>academic@muscatuni-ai.om</td></tr>
-      <tr><td>الدَّعم الفنّي</td><td>المُشكلات التقنية</td><td>support@muscatuni-ai.om</td></tr>
-      <tr><td>الشَّراكات والإعلام</td><td>التَّعاون والتَّغطية</td><td>partners@muscatuni-ai.om</td></tr>
+      <tr><td>قائد البرنامج</td><td>الإدارة التشغيلية اليومية</td><td>director@muscatcollege-ai.om</td></tr>
+      <tr><td>مكتب البرنامج</td><td>التَّسجيل، الاستفسارات</td><td>info@muscatcollege-ai.om</td></tr>
+      <tr><td>الفريق الأكاديمي</td><td>الشؤون التعليمية</td><td>academic@muscatcollege-ai.om</td></tr>
+      <tr><td>الدَّعم الفنّي</td><td>المُشكلات التقنية</td><td>support@muscatcollege-ai.om</td></tr>
+      <tr><td>الشَّراكات والإعلام</td><td>التَّعاون والتَّغطية</td><td>partners@muscatcollege-ai.om</td></tr>
       <tr><td>C3 Advisory (المُستشار)</td><td>التَّصميم والمُتابعة</td><td>www.c3advisory.com</td></tr>
     </tbody>
   </table>
@@ -4897,77 +5072,77 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- NEW PAGE 65 - Appendix G: AI Tools Roadmap -->
 <!-- ========================================================== -->
-<section class="page" data-page="67">
+<section class="page" data-page="72">
   <h3 style="margin-top:0;">المُلحَق (ز): خارطة طَريق أدوات الذكاء الاصطناعي في البرنامج</h3>
   <p style="font-size:10pt;color:var(--muted);margin-bottom:14px;">رِحلة الطالب عبر ٤٠+ أداة موزَّعة على ستّة أشهر، مُصنَّفة في خَمس مَسارات تعليمية. كلّ أداة مَجانية أو ذات طَبقة مَجانية كافية للتَّعلُّم.</p>
 
   <!-- Roadmap SVG: 6-month horizontal timeline with 5 category tracks -->
   <svg viewBox="0 0 780 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;background:#fcfaf3;border:1px solid var(--rule);border-radius:6px;padding:10px;box-sizing:border-box;">
     <!-- Month headers -->
-    <g font-family="Reem Kufi" font-size="11" fill="#0a4d3c" font-weight="700" text-anchor="middle">
-      <rect x="20" y="10" width="120" height="28" fill="#0a4d3c" rx="4"/>
-      <text x="80" y="29" fill="#f8f3e6">الشهر ١ · الأساسيات</text>
-      <rect x="145" y="10" width="120" height="28" fill="#0e6249" rx="4"/>
-      <text x="205" y="29" fill="#f8f3e6">الشهر ٢ · البحث</text>
-      <rect x="270" y="10" width="120" height="28" fill="#b8893c" rx="4"/>
+    <g font-family="Reem Kufi" font-size="11" fill="#3d025e" font-weight="700" text-anchor="middle">
+      <rect x="20" y="10" width="120" height="28" fill="#3d025e" rx="4"/>
+      <text x="80" y="29" fill="#faf6ee">الشهر ١ · الأساسيات</text>
+      <rect x="145" y="10" width="120" height="28" fill="#4f0e61" rx="4"/>
+      <text x="205" y="29" fill="#faf6ee">الشهر ٢ · البحث</text>
+      <rect x="270" y="10" width="120" height="28" fill="#a88224" rx="4"/>
       <text x="330" y="29" fill="#1a1410">الشهر ٣ · الإبداع</text>
-      <rect x="395" y="10" width="120" height="28" fill="#c45c39" rx="4"/>
-      <text x="455" y="29" fill="#f8f3e6">الشهر ٤ · التخصُّص</text>
+      <rect x="395" y="10" width="120" height="28" fill="#8B2253" rx="4"/>
+      <text x="455" y="29" fill="#faf6ee">الشهر ٤ · التخصُّص</text>
       <rect x="520" y="10" width="120" height="28" fill="#8b6f47" rx="4"/>
-      <text x="580" y="29" fill="#f8f3e6">الشهر ٥ · البناء</text>
+      <text x="580" y="29" fill="#faf6ee">الشهر ٥ · البناء</text>
       <rect x="645" y="10" width="120" height="28" fill="#5a4a3a" rx="4"/>
-      <text x="705" y="29" fill="#f8f3e6">الشهر ٦ · التَّخرُّج</text>
+      <text x="705" y="29" fill="#faf6ee">الشهر ٦ · التَّخرُّج</text>
     </g>
 
     <!-- Track 1: Foundation chatbots -->
     <g font-family="Tajawal" font-size="9" fill="#1a1410">
-      <text x="775" y="62" text-anchor="end" font-weight="700" fill="#0a4d3c" font-size="10">مُحادَثة وأساسيات</text>
-      <line x1="20" y1="68" x2="765" y2="68" stroke="#0a4d3c" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
-      <rect x="22" y="74" width="55" height="18" fill="#0a4d3c" rx="3"/><text x="49.5" y="86" fill="#f8f3e6" text-anchor="middle">ChatGPT</text>
-      <rect x="80" y="74" width="55" height="18" fill="#0a4d3c" rx="3"/><text x="107.5" y="86" fill="#f8f3e6" text-anchor="middle">Claude</text>
-      <rect x="22" y="95" width="55" height="18" fill="#0e6249" rx="3"/><text x="49.5" y="107" fill="#f8f3e6" text-anchor="middle">Gemini</text>
-      <rect x="80" y="95" width="55" height="18" fill="#0e6249" rx="3"/><text x="107.5" y="107" fill="#f8f3e6" text-anchor="middle">Copilot</text>
+      <text x="775" y="62" text-anchor="end" font-weight="700" fill="#3d025e" font-size="10">مُحادَثة وأساسيات</text>
+      <line x1="20" y1="68" x2="765" y2="68" stroke="#3d025e" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+      <rect x="22" y="74" width="55" height="18" fill="#3d025e" rx="3"/><text x="49.5" y="86" fill="#faf6ee" text-anchor="middle">ChatGPT</text>
+      <rect x="80" y="74" width="55" height="18" fill="#3d025e" rx="3"/><text x="107.5" y="86" fill="#faf6ee" text-anchor="middle">Claude</text>
+      <rect x="22" y="95" width="55" height="18" fill="#4f0e61" rx="3"/><text x="49.5" y="107" fill="#faf6ee" text-anchor="middle">Gemini</text>
+      <rect x="80" y="95" width="55" height="18" fill="#4f0e61" rx="3"/><text x="107.5" y="107" fill="#faf6ee" text-anchor="middle">Copilot</text>
     </g>
 
     <!-- Track 2: Research -->
     <g font-family="Tajawal" font-size="9" fill="#1a1410">
-      <text x="775" y="138" text-anchor="end" font-weight="700" fill="#0a4d3c" font-size="10">البَحث والتَّحليل</text>
-      <line x1="20" y1="144" x2="765" y2="144" stroke="#0a4d3c" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
-      <rect x="147" y="150" width="55" height="18" fill="#0e6249" rx="3"/><text x="174.5" y="162" fill="#f8f3e6" text-anchor="middle">NotebookLM</text>
-      <rect x="205" y="150" width="55" height="18" fill="#0e6249" rx="3"/><text x="232.5" y="162" fill="#f8f3e6" text-anchor="middle">Perplexity</text>
-      <rect x="147" y="171" width="55" height="18" fill="#0e6249" rx="3"/><text x="174.5" y="183" fill="#f8f3e6" text-anchor="middle">Elicit</text>
-      <rect x="205" y="171" width="55" height="18" fill="#0e6249" rx="3"/><text x="232.5" y="183" fill="#f8f3e6" text-anchor="middle">Notion AI</text>
+      <text x="775" y="138" text-anchor="end" font-weight="700" fill="#3d025e" font-size="10">البَحث والتَّحليل</text>
+      <line x1="20" y1="144" x2="765" y2="144" stroke="#3d025e" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+      <rect x="147" y="150" width="55" height="18" fill="#4f0e61" rx="3"/><text x="174.5" y="162" fill="#faf6ee" text-anchor="middle">NotebookLM</text>
+      <rect x="205" y="150" width="55" height="18" fill="#4f0e61" rx="3"/><text x="232.5" y="162" fill="#faf6ee" text-anchor="middle">Perplexity</text>
+      <rect x="147" y="171" width="55" height="18" fill="#4f0e61" rx="3"/><text x="174.5" y="183" fill="#faf6ee" text-anchor="middle">Elicit</text>
+      <rect x="205" y="171" width="55" height="18" fill="#4f0e61" rx="3"/><text x="232.5" y="183" fill="#faf6ee" text-anchor="middle">Notion AI</text>
     </g>
 
     <!-- Track 3: Creative -->
     <g font-family="Tajawal" font-size="9" fill="#1a1410">
-      <text x="775" y="214" text-anchor="end" font-weight="700" fill="#0a4d3c" font-size="10">الإبداع والوَسائط</text>
-      <line x1="20" y1="220" x2="765" y2="220" stroke="#0a4d3c" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
-      <rect x="272" y="226" width="55" height="18" fill="#b8893c" rx="3"/><text x="299.5" y="238" fill="#1a1410" text-anchor="middle">Canva AI</text>
-      <rect x="330" y="226" width="55" height="18" fill="#b8893c" rx="3"/><text x="357.5" y="238" fill="#1a1410" text-anchor="middle">Leonardo</text>
-      <rect x="272" y="247" width="55" height="18" fill="#b8893c" rx="3"/><text x="299.5" y="259" fill="#1a1410" text-anchor="middle">Suno</text>
-      <rect x="330" y="247" width="55" height="18" fill="#b8893c" rx="3"/><text x="357.5" y="259" fill="#1a1410" text-anchor="middle">ElevenLabs</text>
-      <rect x="272" y="268" width="55" height="18" fill="#b8893c" rx="3"/><text x="299.5" y="280" fill="#1a1410" text-anchor="middle">CapCut</text>
-      <rect x="330" y="268" width="55" height="18" fill="#b8893c" rx="3"/><text x="357.5" y="280" fill="#1a1410" text-anchor="middle">HeyGen</text>
+      <text x="775" y="214" text-anchor="end" font-weight="700" fill="#3d025e" font-size="10">الإبداع والوَسائط</text>
+      <line x1="20" y1="220" x2="765" y2="220" stroke="#3d025e" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+      <rect x="272" y="226" width="55" height="18" fill="#a88224" rx="3"/><text x="299.5" y="238" fill="#1a1410" text-anchor="middle">Canva AI</text>
+      <rect x="330" y="226" width="55" height="18" fill="#a88224" rx="3"/><text x="357.5" y="238" fill="#1a1410" text-anchor="middle">Leonardo</text>
+      <rect x="272" y="247" width="55" height="18" fill="#a88224" rx="3"/><text x="299.5" y="259" fill="#1a1410" text-anchor="middle">Suno</text>
+      <rect x="330" y="247" width="55" height="18" fill="#a88224" rx="3"/><text x="357.5" y="259" fill="#1a1410" text-anchor="middle">ElevenLabs</text>
+      <rect x="272" y="268" width="55" height="18" fill="#a88224" rx="3"/><text x="299.5" y="280" fill="#1a1410" text-anchor="middle">CapCut</text>
+      <rect x="330" y="268" width="55" height="18" fill="#a88224" rx="3"/><text x="357.5" y="280" fill="#1a1410" text-anchor="middle">HeyGen</text>
     </g>
 
     <!-- Track 4: Specialization (Month 4 split into 3 paths) -->
     <g font-family="Tajawal" font-size="8.5" fill="#1a1410">
-      <text x="775" y="306" text-anchor="end" font-weight="700" fill="#0a4d3c" font-size="10">المسارات التَّخصُّصية</text>
-      <line x1="20" y1="312" x2="765" y2="312" stroke="#0a4d3c" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
-      <rect x="397" y="318" width="55" height="16" fill="#c45c39" rx="3"/><text x="424.5" y="329" fill="#f8f3e6" text-anchor="middle">Copilot+Cursor</text>
-      <rect x="455" y="318" width="55" height="16" fill="#c45c39" rx="3"/><text x="482.5" y="329" fill="#f8f3e6" text-anchor="middle">Julius+PowerBI</text>
-      <rect x="397" y="336" width="55" height="16" fill="#c45c39" rx="3"/><text x="424.5" y="347" fill="#f8f3e6" text-anchor="middle">Earth Engine</text>
-      <rect x="455" y="336" width="55" height="16" fill="#c45c39" rx="3"/><text x="482.5" y="347" fill="#f8f3e6" text-anchor="middle">QGIS</text>
+      <text x="775" y="306" text-anchor="end" font-weight="700" fill="#3d025e" font-size="10">المسارات التَّخصُّصية</text>
+      <line x1="20" y1="312" x2="765" y2="312" stroke="#3d025e" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+      <rect x="397" y="318" width="55" height="16" fill="#8B2253" rx="3"/><text x="424.5" y="329" fill="#faf6ee" text-anchor="middle">Copilot+Cursor</text>
+      <rect x="455" y="318" width="55" height="16" fill="#8B2253" rx="3"/><text x="482.5" y="329" fill="#faf6ee" text-anchor="middle">Julius+PowerBI</text>
+      <rect x="397" y="336" width="55" height="16" fill="#8B2253" rx="3"/><text x="424.5" y="347" fill="#faf6ee" text-anchor="middle">Earth Engine</text>
+      <rect x="455" y="336" width="55" height="16" fill="#8B2253" rx="3"/><text x="482.5" y="347" fill="#faf6ee" text-anchor="middle">QGIS</text>
     </g>
 
     <!-- Track 5: Build & Automation -->
     <g font-family="Tajawal" font-size="9" fill="#1a1410">
-      <text x="775" y="368" text-anchor="end" font-weight="700" fill="#0a4d3c" font-size="10">البناء والأتمتة</text>
-      <rect x="522" y="358" width="55" height="16" fill="#8b6f47" rx="3"/><text x="549.5" y="369" fill="#f8f3e6" text-anchor="middle">v0 + Bolt</text>
-      <rect x="580" y="358" width="55" height="16" fill="#8b6f47" rx="3"/><text x="607.5" y="369" fill="#f8f3e6" text-anchor="middle">Replit</text>
-      <rect x="647" y="358" width="55" height="16" fill="#5a4a3a" rx="3"/><text x="674.5" y="369" fill="#f8f3e6" text-anchor="middle">n8n + Make</text>
-      <rect x="705" y="358" width="55" height="16" fill="#5a4a3a" rx="3"/><text x="732.5" y="369" fill="#f8f3e6" text-anchor="middle">Claude API</text>
+      <text x="775" y="368" text-anchor="end" font-weight="700" fill="#3d025e" font-size="10">البناء والأتمتة</text>
+      <rect x="522" y="358" width="55" height="16" fill="#8b6f47" rx="3"/><text x="549.5" y="369" fill="#faf6ee" text-anchor="middle">v0 + Bolt</text>
+      <rect x="580" y="358" width="55" height="16" fill="#8b6f47" rx="3"/><text x="607.5" y="369" fill="#faf6ee" text-anchor="middle">Replit</text>
+      <rect x="647" y="358" width="55" height="16" fill="#5a4a3a" rx="3"/><text x="674.5" y="369" fill="#faf6ee" text-anchor="middle">n8n + Make</text>
+      <rect x="705" y="358" width="55" height="16" fill="#5a4a3a" rx="3"/><text x="732.5" y="369" fill="#faf6ee" text-anchor="middle">Claude API</text>
     </g>
   </svg>
 
@@ -4980,19 +5155,19 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 
   <h3 style="margin-top:14px;font-size:13pt;">المَسارات المُلوَّنة في الخارطة</h3>
   <div class="grid-3" style="gap:8px;">
-    <div style="background:#0a4d3c;color:#f8f3e6;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">المُحادَثة والأساسيات</div>
-    <div style="background:#0e6249;color:#f8f3e6;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">البَحث والتَّحليل</div>
-    <div style="background:#b8893c;color:#1a1410;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">الإبداع والوَسائط</div>
-    <div style="background:#c45c39;color:#f8f3e6;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">المسارات التَّخصُّصية</div>
-    <div style="background:#8b6f47;color:#f8f3e6;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">البناء بالذكاء الاصطناعي</div>
-    <div style="background:#5a4a3a;color:#f8f3e6;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">الأتمتة والـ APIs</div>
+    <div style="background:#3d025e;color:#faf6ee;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">المُحادَثة والأساسيات</div>
+    <div style="background:#4f0e61;color:#faf6ee;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">البَحث والتَّحليل</div>
+    <div style="background:#a88224;color:#1a1410;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">الإبداع والوَسائط</div>
+    <div style="background:#8B2253;color:#faf6ee;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">المسارات التَّخصُّصية</div>
+    <div style="background:#8b6f47;color:#faf6ee;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">البناء بالذكاء الاصطناعي</div>
+    <div style="background:#5a4a3a;color:#faf6ee;padding:6px 10px;border-radius:4px;font-size:9pt;text-align:center;font-family:'Reem Kufi';">الأتمتة والـ APIs</div>
   </div>
 </section>
 
 <!-- ========================================================== -->
 <!-- NEW PAGE 66 - Tools Detailed Table -->
 <!-- ========================================================== -->
-<section class="page" data-page="68" style="font-size:8.5pt;">
+<section class="page" data-page="73" style="font-size:8.5pt;">
   <h3 style="margin-top:0;">جَدول الأدوات التَّفصيلي · ٤٢ أداة (الجزء الأول)</h3>
   <p style="font-size:9pt;color:var(--muted);margin-bottom:8px;">الأدوات الأساسية وأدوات البَحث والإبداع (الأشهر ١–٣).</p>
 
@@ -5031,7 +5206,7 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- NEW PAGE 67 - Tools Table Part 2 + Stats -->
 <!-- ========================================================== -->
-<section class="page" data-page="69" style="font-size:8.5pt;">
+<section class="page" data-page="74" style="font-size:8.5pt;">
   <h3 style="margin-top:0;">جَدول الأدوات التَّفصيلي · ٤٢ أداة (الجزء الثاني)</h3>
   <p style="font-size:9pt;color:var(--muted);margin-bottom:8px;">أدوات التَّخصُّص والبناء والأتمتة (الأشهر ٤–٦).</p>
 
@@ -5073,9 +5248,9 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- PAGE 67 - References + Closing -->
 <!-- ========================================================== -->
-<section class="page" data-page="70" style="font-size:9.5pt;line-height:1.55;">
+<section class="page" data-page="75" style="font-size:9.5pt;line-height:1.55;">
   <div class="section-head">
-    <div class="section-num">١٦</div>
+    <div class="section-num">١٧</div>
     <div>
       <h2>المراجع والمصادر</h2>
       <div class="section-sub">مكتبة الإسناد العلمي والاستراتيجي</div>
@@ -5088,7 +5263,6 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
     <li>وزارة النَّقل والاتّصالات وتقنية المعلومات — <strong>البرنامج الوطني للذكاء الاصطناعي والتقنيات الرقمية المُتقدّمة</strong>، ٢٠٢٢.</li>
     <li>هيئة المُناقصات والمُحتوى المحلّي — <strong>سياسة المُحتوى المحلّي ٢٠٢٤–٢٠٢٧</strong>.</li>
     <li>وزارة التعليم العالي — <strong>الاستراتيجية الوطنية للتعليم العالي ٢٠٤٠</strong>.</li>
-    <li>جمعية تقنية المعلومات العُمانية — <strong>تقرير حال التقنية في عُمان ٢٠٢٥</strong>.</li>
   </ul>
 
   <h3 style="margin:0.5em 0 0.3em;">المراجع الدَّولية</h3>
@@ -5142,25 +5316,25 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <!-- ========================================================== -->
 <!-- PAGE 68 - Closing Branded Page -->
 <!-- ========================================================== -->
-<section class="page" data-page="71" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#0a4d3c 0%,#0e6249 50%,#0a4d3c 100%);color:#f8f3e6;">
+<section class="page" data-page="76" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#3d025e 0%,#4f0e61 50%,#3d025e 100%);color:#faf6ee;">
   <div style="max-width:140mm;">
-    <div style="font-family:'Reem Kufi';font-size:11pt;letter-spacing:0.3em;color:#b8893c;margin-bottom:2rem;text-transform:uppercase;">In Closing · في الختام</div>
+    <div style="font-family:'Reem Kufi';font-size:11pt;letter-spacing:0.3em;color:#a88224;margin-bottom:2rem;text-transform:uppercase;">In Closing · في الختام</div>
 
     <div style="background:rgba(248,243,230,0.1);border:1px solid rgba(184,137,60,0.5);padding:2.5rem;border-radius:8px;margin-bottom:2rem;">
-      <div style="font-family:'Amiri',serif;font-size:18pt;line-height:1.8;color:#f8f3e6;margin-bottom:1.5rem;">«إنّ تعليم آلة كيف تُفكِّر هو إعادة اكتشاف لِما يَجعلنا بشراً.»</div>
+      <div style="font-family:'Amiri',serif;font-size:18pt;line-height:1.8;color:#faf6ee;margin-bottom:1.5rem;">«إنّ تعليم آلة كيف تُفكِّر هو إعادة اكتشاف لِما يَجعلنا بشراً.»</div>
       <div style="font-family:'Amiri',serif;font-size:14pt;line-height:1.8;color:#d4a55a;font-style:italic;">«أعظم استثمار في زَمن الذكاء الاصطناعي هو الاستثمار في الإنسان نفسه.»</div>
     </div>
 
     <div style="display:flex;align-items:center;justify-content:center;gap:24px;margin:3rem 0 2rem;">
       <img src="data:image/jpeg;base64,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" alt="C3 Advisory" style="width:90px;height:90px;background:#fff;padding:6px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
       <div style="text-align:right;">
-        <div style="font-family:'Reem Kufi';font-size:18pt;font-weight:700;color:#b8893c;line-height:1.2;">C3 Advisory</div>
+        <div style="font-family:'Reem Kufi';font-size:18pt;font-weight:700;color:#a88224;line-height:1.2;">C3 Advisory</div>
         <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:0.2em;color:#d4a55a;margin-top:4px;">COMMUNITIES CONNECT CITIES</div>
       </div>
     </div>
 
     <div style="border-top:1px solid rgba(184,137,60,0.3);padding-top:1.5rem;margin-top:2rem;">
-      <div style="font-family:'Reem Kufi';font-size:14pt;color:#b8893c;font-weight:600;margin-bottom:0.4rem;">جامعة مسقط × C3 Advisory</div>
+      <div style="font-family:'Reem Kufi';font-size:14pt;color:#a88224;font-weight:600;margin-bottom:0.4rem;">كلية مسقط × C3 Advisory</div>
       <div style="font-family:'IBM Plex Sans Arabic';font-size:9pt;letter-spacing:0.2em;opacity:0.7;margin-top:0.4rem;">APRIL 2026 · أبريل ٢٠٢٦</div>
     </div>
   </div>
@@ -5172,12 +5346,12 @@ const response = <span style="color:#7ab59d">await</span> fetch(<span style="col
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const baseColors = {
-      emerald: '#0a4d3c',
-      emeraldLight: '#0e6249',
-      gold: '#b8893c',
+      emerald: '#3d025e',
+      emeraldLight: '#4f0e61',
+      gold: '#a88224',
       goldLight: '#d4a55a',
-      terra: '#c45c39',
-      cream: '#f8f3e6',
+      terra: '#8B2253',
+      cream: '#faf6ee',
       paper: '#fcfaf3',
       dark: '#1a1410'
     };
